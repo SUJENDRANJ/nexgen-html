@@ -507,30 +507,14 @@
       <!-- hero section -->
       <section class="hero-section">
         <div class="hero-text">
-          <h1>NEXGEN NEXTOPIA</h1>
+          <h1>Explore Your Imagination</h1>
           <p>
-            At NEXGEN NEXTOPIA, we guide college students through innovative
-            programs, internships, and real-world projects—equipping them with
-            the skills, confidence, and connections to thrive in tomorrow’s
-            world.
+            Dive into the world of 3D with immersive web experiences powered by
+            Spline. Customize and animate stunning interfaces for your users.
           </p>
-          <a href="#about">
-            <button>Get Started</button>
-          </a>
+          <button>Get Started</button>
         </div>
 
-        <!-- <div style="
-          width: 100%;
-          max-width: 800px;
-          height: 600px;
-          overflow: hidden;
-          position: relative;
-          border-radius: 12px;
-          flex-shrink: 0;
-          position: absolute;
-          z-index: 999;right: 0;
-        
-        "></div> -->
         <div class="spline-crop">
           <script
             type="module"
@@ -541,6 +525,94 @@
           ></spline-viewer>
         </div>
       </section>
+
+      <style>
+        .hero-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 100vh;
+          box-sizing: border-box;
+          flex-wrap: wrap;
+          gap: 40px;
+          padding: 40px;
+          background-color: black;
+          color: white;
+          font-family: Arial, sans-serif;
+        }
+
+        .hero-text {
+          flex: 1;
+          max-width: 600px;
+        }
+
+        .hero-text h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+
+        .hero-text p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 30px;
+        }
+
+        .hero-text button {
+          padding: 12px 24px;
+          font-size: 16px;
+          border: none;
+          background: white;
+          color: black;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .spline-crop {
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          overflow: hidden;
+          position: relative;
+          border-radius: 12px;
+          flex-shrink: 0;
+        }
+
+        spline-viewer {
+          position: absolute;
+          width: 900px;
+          height: 1000px;
+          top: calc((600px - 1000px) / 2);
+          left: calc((800px - 900px) / 2);
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .hero-text h1 {
+            font-size: 36px;
+          }
+
+          .hero-text p {
+            font-size: 16px;
+          }
+
+          .spline-crop {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+          }
+
+          spline-viewer {
+            top: calc((75vw - 1000px) / 2);
+            left: calc((100vw - 900px) / 2);
+          }
+        }
+      </style>
 
       <style>
         @font-face {
