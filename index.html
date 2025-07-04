@@ -17,6 +17,7 @@
     <meta content="Webflow" name="generator" />
     <link href="./assets/css/index.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./assets/css/hero-section.css" />
+
     <style>
       @media (min-width: 992px) {
         html.w-mod-js:not(.w-mod-ix)
@@ -71,7 +72,7 @@
     <style>
       .navbar-wrapper {
         color: black;
-        background-image: linear-gradient(180deg, #ffee57, #ffea2b);
+        background-image: linear-gradient(180deg, #ffffff, #ffffff);
         border: none !important;
       }
 
@@ -452,7 +453,7 @@
               <div class="nav-button-block">
                 <a
                   data-w-id="3b97446a-c812-567a-d83c-262c45205e39"
-                  href="/contact"
+                  href="/internship.html"
                   class="primary-button-2 outline-copy w-inline-block"
                   ><div class="primary-all-content outline-2">
                     <div class="primary-button-arrow-block-2 outline-3">
@@ -463,13 +464,13 @@
                         data-w-id="3b97446a-c812-567a-d83c-262c45205e3f"
                         class="button-text outline-7"
                       >
-                        Let`s talk
+                        Join Program
                       </div>
                       <div
                         data-w-id="3b97446a-c812-567a-d83c-262c45205e41"
                         class="button-text _02"
                       >
-                        Let`s talk
+                        Join Program
                       </div>
                     </div>
                     <div class="primary-button-arrow-block-right-2">
@@ -503,276 +504,141 @@
         </div>
       </section>
 
-      <section class="hero-wrapper">
-        <div class="hero-top-border-wrap">
-          <div class="navbar-border-area">
-            <div
-              data-w-id="12ab9edc-3dbe-a085-0d7a-7421dcf50646"
-              class="navbar-border-line-animation"
-            >
-              <div class="border-dot-block">
-                <div class="nav-dot-border"></div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-w-id="ed4cb22f-85b5-e9b1-93ce-c2b9450bfd0f"
-            class="border-line"
-          >
-            <div class="border-line-animation">
-              <div class="border-dot _01"><div class="dot-border"></div></div>
-              <div class="border-dot _01"><div class="dot-border"></div></div>
-            </div>
-            <div class="border-line-animation none">
-              <div class="border-dot _02"><div class="dot-border"></div></div>
-              <div class="border-dot _02"><div class="dot-border"></div></div>
-            </div>
-            <div
-              data-w-id="ed4cb22f-85b5-e9b1-93ce-c2b9450bfd1a"
-              class="border-line-animation"
-            >
-              <div class="border-dot _03"><div class="dot-border"></div></div>
-              <div class="border-dot _03"><div class="dot-border"></div></div>
-            </div>
-            <div class="border-line-animation">
-              <div class="border-dot _04"><div class="dot-border"></div></div>
-              <div class="border-dot _04"><div class="dot-border"></div></div>
-            </div>
-            <div class="border-line-animation none">
-              <div class="border-dot _05"><div class="dot-border"></div></div>
-              <div class="border-dot _05"><div class="dot-border"></div></div>
-            </div>
-            <div class="border-line-animation">
-              <div class="border-dot _06"><div class="dot-border"></div></div>
-              <div class="border-dot _06"><div class="dot-border"></div></div>
-            </div>
-          </div>
+      <!-- hero section -->
+      <section class="hero-section">
+        <div class="hero-text">
+          <h1>NEXGEN NEXTOPIA</h1>
+          <p>
+            At NEXGEN NEXTOPIA, we guide college students through innovative
+            programs, internships, and real-world projects—equipping them with
+            the skills, confidence, and connections to thrive in tomorrow’s
+            world.
+          </p>
+          <a href="#about">
+            <button>Get Started</button>
+          </a>
         </div>
 
-        <div class="hero-section">
-          <div class="w-embed">
-            <style>
-              .carousel .list .item:nth-child(1),
-              .carousel .list .item:nth-child(2) {
-                top: 0;
-                left: 0;
-                transform: translate(0, 0);
-                border-radius: 0;
-                width: 100%;
-                height: 100%;
-              }
-
-              .carousel .list .item:nth-child(3) {
-                left: 80%;
-              }
-
-              .carousel .list .item:nth-child(4) {
-                left: calc(80% + 200px);
-              }
-
-              .carousel .list .item:nth-child(n + 5) {
-                left: calc(80% + 800px);
-                opacity: 0;
-              }
-
-              /**/
-              .list .item:nth-child(2) .content {
-                display: block;
-              }
-
-              /**/
-              @keyframes animate {
-                from {
-                  opacity: 0;
-                  transform: translate(0, 100px);
-                  filter: blur(33px);
-                }
-
-                to {
-                  opacity: 1;
-                  transform: translate(0);
-                  filter: blur(0);
-                }
-              }
-
-              /**/
-              @keyframes runningTime {
-                from {
-                  width: 0%;
-                }
-                to {
-                  width: 100%;
-                }
-              }
-
-              /**/
-              .hero-img {
-                transition: right 2s cubic-bezier(0.55, 0.055, 0.675, 0.19),
-                  width 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
-                /* Add smooth transition */
-              }
-
-              .hero-img.active {
-                transition: right 2s cubic-bezier(0.22, 1, 0.36, 1),
-                  width 2s cubic-bezier(0.22, 1, 0.36, 1);
-
-                /* Add smooth transition */
-              }
-            </style>
-          </div>
-          <div class="carousel">
-            <div class="list">
-              <div class="item bg-yellow">
-                <img
-                  src="./assets/images/hero/nexgen-ventures.png"
-                  loading="lazy"
-                  sizes="40vw"
-                  alt=""
-                  class="hero-img active"
-                />
-
-                <div class="content">
-                  <h1 class="title">Nexgen Ventures</h1>
-                  <div class="description top-margin">
-                    At Nexgen Ventures, we fuel bold ideas by providing the
-                    support, resources, and mentorship needed to transform
-                    innovative concepts into impactful ventures.
-                  </div>
-                </div>
-              </div>
-              <div class="item bg-yellow">
-                <img
-                  src="./assets/images/hero/nexgen-nextopia.png"
-                  loading="lazy"
-                  sizes="40vw"
-                  alt=""
-                  class="hero-img active"
-                />
-                <div class="content">
-                  <h1 class="title">Nexgen Nextopia</h1>
-                  <div class="description top-margin">
-                    At NEXGEN NEXTOPIA, we guide college students through
-                    innovative programs, internships, and real-world
-                    projects—equipping them with the skills, confidence, and
-                    connections to thrive in tomorrow’s world.
-                  </div>
-                </div>
-              </div>
-
-              <!-- repeat -->
-
-              <div class="item bg-yellow">
-                <img
-                  src="./assets/images/hero/nexgen-ventures.png"
-                  loading="lazy"
-                  sizes="40vw"
-                  alt=""
-                  class="hero-img active"
-                />
-
-                <div class="content">
-                  <h1 class="title">Nexgen Ventures</h1>
-                  <div class="description top-margin">
-                    At Nexgen Ventures, we fuel bold ideas by providing the
-                    support, resources, and mentorship needed to transform
-                    innovative concepts into impactful ventures.
-                  </div>
-                </div>
-              </div>
-              <div class="item bg-yellow">
-                <img
-                  src="./assets/images/hero/nexgen-nextopia.png"
-                  loading="lazy"
-                  sizes="40vw"
-                  alt=""
-                  class="hero-img active"
-                />
-                <div class="content">
-                  <h1 class="title">Nexgen Nextopia</h1>
-                  <div class="description top-margin">
-                    At NEXGEN NEXTOPIA, we guide college students through
-                    innovative programs, internships, and real-world
-                    projects—equipping them with the skills, confidence, and
-                    connections to thrive in tomorrow’s world.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="arrows">
-              <button class="nav-button prev">&lt;</button
-              ><button class="nav-button next">&gt;</button>
-            </div>
-          </div>
-          <script>
-            var nextBtn = document.querySelector(".nav-button.next"),
-              prevBtn = document.querySelector(".nav-button.prev"),
-              carousel = document.querySelector(".carousel"),
-              list = document.querySelector(".list"),
-              items = document.querySelectorAll(".item");
-
-            let timeAutoNext = 4000;
-
-            nextBtn.onclick = function () {
-              showSlider("next");
-            };
-
-            prevBtn.onclick = function () {
-              showSlider("prev");
-            };
-
-            let runTimeOut;
-            let runNextAuto = setTimeout(() => {
-              nextBtn.click();
-            }, timeAutoNext);
-
-            function showSlider(type) {
-              let sliderItemsDom = list.querySelectorAll(
-                ".carousel .list .item"
-              );
-
-              sliderItemsDom.forEach((slide) =>
-                slide.querySelector(".hero-img").classList.remove("active")
-              );
-
-              if (type === "next") {
-                list.appendChild(sliderItemsDom[0]);
-                carousel.classList.add("next");
-              } else {
-                list.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
-                carousel.classList.add("prev");
-              }
-
-              let secondVisibleSlide = list.querySelector(
-                ".carousel .list .item:nth-child(2) .hero-img"
-              );
-              secondVisibleSlide.classList.add("active");
-
-              setTimeout(() => {
-                carousel.classList.remove("next");
-                carousel.classList.remove("prev");
-              }, 10);
-
-              clearTimeout(runTimeOut);
-              clearTimeout(runNextAuto);
-
-              runNextAuto = setTimeout(() => {
-                nextBtn.click();
-              }, timeAutoNext);
-            }
-
-            document.addEventListener("DOMContentLoaded", function () {
-              let secondSlide = list.querySelector(
-                ".carousel .list .item:nth-child(2) .hero-img"
-              );
-              if (secondSlide) {
-                secondSlide.classList.add("active");
-              }
-            });
-          </script>
+        <!-- <div style="
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          overflow: hidden;
+          position: relative;
+          border-radius: 12px;
+          flex-shrink: 0;
+          position: absolute;
+          z-index: 999;right: 0;
+        
+        "></div> -->
+        <div class="spline-crop">
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.10.21/build/spline-viewer.js"
+          ></script>
+          <spline-viewer
+            url="https://prod.spline.design/vAyjHo6r1H9D5zrO/scene.splinecode"
+          ></spline-viewer>
         </div>
       </section>
-      <section class="about-wrapper">
+
+      <style>
+        @font-face {
+          font-family: "Ogelo";
+          src: url("./assets/fonts/Ogelo DEMO.otf") format("opentype");
+        }
+
+        .hero-section {
+          font-family: "Roboto", sans-serif;
+        }
+
+        .hero-section {
+          margin-top: -20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 100vh;
+          box-sizing: border-box;
+          flex-wrap: wrap;
+          gap: 40px;
+          padding: 40px;
+          background-color: black;
+          color: white;
+        }
+
+        .hero-text {
+          flex: 1;
+          max-width: 600px;
+        }
+
+        .hero-text h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+
+        .hero-text p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 30px;
+        }
+
+        .hero-text button {
+          padding: 12px 24px;
+          font-size: 16px;
+          border: none;
+          background: white;
+          color: black;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .spline-crop {
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          overflow: hidden;
+          position: relative;
+          border-radius: 12px;
+          flex-shrink: 0;
+        }
+
+        spline-viewer {
+          position: absolute;
+          width: 900px;
+          height: 1000px;
+          top: calc((600px - 800px) / 2);
+          left: calc((800px - 900px) / 2);
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .hero-text h1 {
+            font-size: 36px;
+          }
+
+          .hero-text p {
+            font-size: 16px;
+          }
+
+          .spline-crop {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 3;
+          }
+
+          spline-viewer {
+            top: calc((100vw - 400px) / 2);
+            left: calc((15vw - 600px) / 2);
+          }
+        }
+      </style>
+      <section class="about-wrapper" id="about">
         <div class="container">
           <div class="about-content-block">
             <div
