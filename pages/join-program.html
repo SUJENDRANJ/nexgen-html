@@ -48,6 +48,21 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
+
+    <!-- email.js -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "6fgq3ZgYrgI9-8Ah9",
+        });
+      })();
+    </script>
+    <script src="../assets/js/email.js"></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -489,7 +504,7 @@
                 <a
                   data-w-id="157ce8af-dbb3-4b09-d50a-72b31f76a9f8"
                   style="opacity: 0"
-                  href="#hubs"
+                  href="#join"
                   class="hero-down-arrow-block w-inline-block"
                   ><div class="hero-down-arrow"></div></a
                 >
@@ -577,188 +592,92 @@
           </div>
         </div>
       </section>
-      <section id="hubs" class="hubs-wrapper">
-        <div class="container">
-          <div class="our-hubs-content-block">
-            <div class="section-heading-content">
-              <div class="section-heading">
-                <div
-                  data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b650"
-                  style="opacity: 0"
-                  class="hubs-heading-title"
-                >
-                  Join Now
-                </div>
-              </div>
-              <div
-                data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b652"
-                style="opacity: 0"
-                class="section-heading-information-categories none"
-              >
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">location</div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">
-                    Built for Vision
-                  </div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">Creativity</div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">
-                    Powering Ideas
-                  </div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">Space to Grow</div>
-                </div>
-              </div>
-
-              <div class="contact-wrapper">
-                <div class="container">
-                  <div class="contact-conetent-block">
-                    <div
-                      data-w-id="e871530d-49c4-b615-3f06-47de2bdb4be5"
-                      style="opacity: 0"
-                      class="contact-block"
-                    >
-                      <div class="contact-form-block w-form">
-                        <form
-                          id="email-form"
-                          name="email-form"
-                          data-name="Email Form"
-                          method="get"
-                          class="contact-form"
-                          data-wf-page-id="6821bc4f049a687ff82eaecc"
-                          data-wf-element-id="79598cef-54c6-8753-7d44-f44d72f8a37e"
-                        >
-                          <div class="text-field-item-block">
-                            <div class="text-field-item">
-                              <input
-                                class="text-field w-input"
-                                maxlength="256"
-                                name="name"
-                                data-name="Name"
-                                placeholder="Your Name"
-                                type="text"
-                                id="name"
-                                required=""
-                              />
-                            </div>
-                            <div class="text-field-item">
-                              <input
-                                class="text-field w-input"
-                                maxlength="256"
-                                name="Email"
-                                data-name="Email"
-                                placeholder="Your Email"
-                                type="email"
-                                id="Email"
-                                required=""
-                              />
-                            </div>
-                          </div>
-                          <div class="text-field-item-block">
-                            <div class="text-field-item">
-                              <div class="select-text-field-block">
-                                <select
-                                  id="field"
-                                  name="field"
-                                  data-name="Field"
-                                  required=""
-                                  class="select-field w-select"
-                                >
-                                  <option value="">Subject</option>
-                                  <option value="UX/UI Design">
-                                    UX/UI Design
-                                  </option>
-                                  <option value="Brand Identity">
-                                    Brand Identity
-                                  </option>
-                                  <option value="Webflow">Webflow</option>
-                                  <option value="Web Development">
-                                    Web Development
-                                  </option>
-                                  <option value="App Development">
-                                    App Development
-                                  </option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="text-field-item-block">
-                            <div class="text-field-item">
-                              <textarea
-                                required=""
-                                placeholder="Write Message..."
-                                maxlength="5000"
-                                id="Text-Area"
-                                name="Text-Area"
-                                data-name="Text Area"
-                                class="text-area w-input"
-                              ></textarea>
-                            </div>
-                          </div>
-                          <div class="form-button-block">
-                            <div
-                              data-w-id="fbab2baa-3a8f-4b14-b095-b9a4be041e3b"
-                              class="primary-button-2 outline"
-                            >
-                              <div class="primary-all-content outline-2">
-                                <div
-                                  class="primary-button-arrow-block-2 outline-3"
-                                >
-                                  <div class="primary-button-arrow-2 two">
-                                    
-                                  </div>
-                                </div>
-                                <div class="primary-button-text-2 outline-5">
-                                  <input
-                                    type="submit"
-                                    data-wait="Please wait..."
-                                    class="submit-button w-button"
-                                    value="Send a message"
-                                  />
-                                </div>
-                                <div
-                                  style="opacity: 0; width: 0px; height: 0px"
-                                  class="primary-button-arrow-block-right-2"
-                                >
-                                  <div class="primary-button-arrow-2"></div>
-                                </div>
-                              </div>
-                              <div
-                                style="width: 0%; height: 100%"
-                                class="button-hover-bg-outline"
-                              ></div>
-                            </div>
-                          </div>
-                        </form>
-
-                        <div class="success-message w-form-done">
-                          <div class="body-text-default-medium">
-                            Thank you! Your submission has been received!
-                          </div>
-                        </div>
-                        <div class="error-message w-form-fail">
-                          <div class="body-text-small text-medium">
-                            Oops! Something went wrong while submitting the
-                            form.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- pages -->
+      <style>
+        .contact-wrapper {
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          margin-top: 70px;
+          margin-bottom: 70px;
+        }
+
+        .text-field-item-block {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 16px;
+          margin-bottom: 16px;
+        }
+
+        .text-field-item {
+          flex: 1 1 calc(50% - 10px); /* Two per row */
+          min-width: 240px;
+        }
+
+        .text-field.w-input,
+        .select-field.w-select,
+        .text-area {
+          width: 100%;
+          padding: 10px 12px;
+          font-size: 16px;
+        }
+
+        textarea.text-area {
+          min-height: 120px;
+          resize: vertical;
+        }
+
+        .form-button-block {
+          margin-top: 24px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .text-field-item img {
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+        }
+
+        /* Responsive for tablet and below */
+        @media screen and (max-width: 768px) {
+          .text-field-item-block {
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+          }
+
+          .text-field-item {
+            flex: 1 1 100%;
+            width: 100%;
+            min-width: unset;
+          }
+
+          .form-button-block {
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .contact-form {
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .primary-button-text-2 button,
+          .primary-button-text-2 input {
+            font-size: 16px;
+            padding: 10px 16px;
+          }
+
+          .contact-wrapper {
+            padding: 12px;
+          }
+        }
+      </style>
+
       <section>
         <!-- Page 1 -->
         <div
@@ -767,6 +686,7 @@
           style="display: flex; justify-content: center"
         >
           <form
+            style="max-width: 800px; width: 100%"
             id="email-form"
             name="email-form"
             data-name="Email Form"
@@ -786,7 +706,7 @@
                   placeholder="Your Name"
                   type="text"
                   id="name"
-                  required=""
+                  required
                 />
               </div>
               <div class="text-field-item">
@@ -798,7 +718,7 @@
                   placeholder="Your Email"
                   type="email"
                   id="Email"
-                  required=""
+                  required
                 />
               </div>
             </div>
@@ -935,32 +855,6 @@
               </div>
             </div>
 
-            <!-- Row 6: Start Date + Resume -->
-            <!-- <div class="text-field-item-block">
-              <div class="text-field-item">
-                
-                <input
-                  type="date"
-                  class="text-field w-input"
-                  name="Start-Date"
-                  data-name="Start-Date"
-                  id="Start-Date"
-                  required=""
-                />
-              </div>
-              <div class="text-field-item">
-                <input
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  class="text-field w-input"
-                  name="Resume"
-                  data-name="Resume"
-                  id="Resume"
-                />
-              </div>
-            </div> -->
-
-            <!-- Button Block -->
             <div class="form-button-block">
               <div
                 data-w-id="fbab2baa-3a8f-4b14-b095-b9a4be041e3b"
@@ -1008,18 +902,18 @@
                 data-name="Experience Form"
                 method="post"
                 class="contact-form"
-                data-wf-page-id="6821bc4f049a687ff82eaecc"
-                data-wf-element-id="next-page-form"
+                onsubmit="sendMail(); return false;"
               >
                 <!-- Experience Info -->
                 <div class="text-field-item-block">
                   <div class="text-field-item">
                     <div class="select-text-field-block">
                       <select
+                        id="Experience"
                         name="Experience"
                         data-name="Experience"
                         class="select-field w-select"
-                        required=""
+                        required
                       >
                         <option value="">Do you have experience?</option>
                         <option value="Yes">Yes</option>
@@ -1044,7 +938,7 @@
                 <div class="text-field-item-block">
                   <div class="text-field-item">
                     <textarea
-                      required=""
+                      required
                       placeholder="Why are you applying for this internship?"
                       maxlength="5000"
                       id="Motivation"
@@ -1080,13 +974,11 @@
                       placeholder="Payment Reference ID"
                       type="text"
                       id="Payment-Ref"
-                      required=""
+                      required
                     />
                     <br />
-
-                    <!-- Label for Payment Image -->
                     <label
-                      for="payment-qr"
+                      for="Payment-Screenshot"
                       style="
                         display: block;
                         font-weight: 600;
@@ -1102,26 +994,64 @@
                       name="Payment-Screenshot"
                       data-name="Payment Screenshot"
                       id="Payment-Screenshot"
-                      required=""
+                      required
                     />
                   </div>
                 </div>
 
                 <!-- Buttons -->
-                <div class="form-button-block" style="display: flex; gap: 12px">
-                  <button
-                    type="button"
-                    class="submit-button w-button"
-                    id="prev-button"
-                  >
-                    Previous
-                  </button>
-                  <input
-                    type="submit"
-                    data-wait="Please wait..."
-                    class="submit-button w-button"
-                    value="Submit Application"
-                  />
+                <div style="display: flex; gap: 12px">
+                  <div class="form-button-block">
+                    <div class="primary-button-2 outline">
+                      <div class="primary-all-content outline-2">
+                        <div class="primary-button-arrow-block-2 outline-3">
+                          <div class="primary-button-arrow-2 two"></div>
+                        </div>
+                        <div class="primary-button-text-2 outline-5">
+                          <button type="button" class="submit-button w-button">
+                            Previous
+                          </button>
+                        </div>
+                        <div
+                          class="primary-button-arrow-block-right-2"
+                          style="opacity: 0; width: 0px; height: 0px"
+                        >
+                          <div class="primary-button-arrow-2"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="button-hover-bg-outline"
+                        style="width: 0%; height: 100%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="form-button-block">
+                    <div class="primary-button-2 outline">
+                      <div class="primary-all-content outline-2">
+                        <div class="primary-button-arrow-block-2 outline-3">
+                          <div class="primary-button-arrow-2 two"></div>
+                        </div>
+                        <div class="primary-button-text-2 outline-5">
+                          <input
+                            type="submit"
+                            data-wait="Please wait..."
+                            class="submit-button w-button"
+                            value="Submit Application"
+                          />
+                        </div>
+                        <div
+                          class="primary-button-arrow-block-right-2"
+                          style="opacity: 0; width: 0px; height: 0px"
+                        >
+                          <div class="primary-button-arrow-2"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="button-hover-bg-outline"
+                        style="width: 0%; height: 100%"
+                      ></div>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -1148,11 +1078,21 @@
           const thankYou = document.getElementById("thank-you");
 
           // Handle Next
+          // Handle Next with validation
           page1
             .querySelector("button[type='button']")
             .addEventListener("click", () => {
-              page1.style.display = "none";
-              page2.style.display = "flex";
+              const form = document.getElementById("email-form");
+
+              if (form.checkValidity()) {
+                // ✅ All required fields filled
+                page1.style.display = "none";
+                page2.style.display = "flex";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              } else {
+                // ❌ Show built-in browser validation tooltips
+                form.reportValidity();
+              }
             });
 
           // Handle Previous
@@ -1165,16 +1105,10 @@
 
           // Handle Submit
           page2.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Remove this line if you're submitting to a server
-
-            // Optional: Validate fields manually here if needed
-
+            e.preventDefault();
             page2.style.display = "none";
             thankYou.style.display = "flex";
-
-            // Optional: Reset all forms
-            document.getElementById("email-form").reset();
-
+            document.getElementById("email-form").reset(); // ❌ Move this
             this.reset();
           });
         </script>
@@ -1197,7 +1131,7 @@
                       ><img
                         src="logo"
                         loading="lazy"
-                        alt="Poomo Template-Footer Logo"
+                        alt="Logo"
                         class="footer-brand-logo"
                     /></a>
                     <div class="footer-description">
