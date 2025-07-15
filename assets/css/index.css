@@ -2625,7 +2625,7 @@ figure {
 }
 
 .style-hero-wrapper {
-  background-image: url("https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/6807618123399cb81083a04c_Style%20Guide%20Hero%20Image.webp");
+  /* background-image: url("https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/6807618123399cb81083a04c_Style%20Guide%20Hero%20Image.webp"); */
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3455,7 +3455,7 @@ figure {
 }
 
 .hero-wrapper {
-  background-image: url("https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/680f197f773d99cf583df806_Hero%20Bg.webp");
+  /* background-image: url("https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/680f197f773d99cf583df806_Hero%20Bg.webp"); */
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,0 +1,959 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png+xml" href="/mascot-min.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zentry-clone</title>
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index-CDVhgbwO.js"
+    ></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-VSuASEB8.css" />
+  </head>
+  <body>
+    <div id="root">
+      <main class="relative min-h-screen w-screen overflow-x-hidden">
+        <div
+          class="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            opacity: 1;
+            transform: translate(0px, 0px);
+          "
+        >
+          <header class="absolute top-1/2 w-full -translate-y-1/2">
+            <nav class="flex size-full items-center justify-between p-4">
+              <div class="flex items-center gap-7">
+                <img alt="logo" class="w-10" src="/img/mascot.png" /><button
+                  id="product-button"
+                  class="group relative z-10 cursor-pointer w-fit overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black bg-blue-50 md:flex hidden items-center justify-center gap-1"
+                >
+                  <span
+                    class="relative inline-flex overflow-hidden font-general text-xs uppercase"
+                    ><div>Products</div></span
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.2"
+                    baseProfile="tiny"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.368 19.102c.349 1.049 1.011 1.086 1.478.086l5.309-11.375c.467-1.002.034-1.434-.967-.967l-11.376 5.308c-1.001.467-.963 1.129.085 1.479l4.103 1.367 1.368 4.102z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex h-full items-center">
+                <div class="hidden md:block">
+                  <a href="#nexus" class="nav-hover-btn">Nexus</a
+                  ><a href="#vault" class="nav-hover-btn">Vault</a
+                  ><a href="#prologue" class="nav-hover-btn">Prologue</a
+                  ><a href="#about" class="nav-hover-btn">About</a
+                  ><a href="#contact" class="nav-hover-btn">Contact</a>
+                </div>
+                <button
+                  class="ml-10 flex items-center space-x-0.5 cursor-pointer"
+                >
+                  <audio class="hidden" src="/audio/loop.mp3" loop=""></audio>
+                  <div
+                    class="indicator-line"
+                    style="animation-delay: 0.1s"
+                  ></div>
+                  <div
+                    class="indicator-line"
+                    style="animation-delay: 0.2s"
+                  ></div>
+                  <div
+                    class="indicator-line"
+                    style="animation-delay: 0.3s"
+                  ></div>
+                  <div
+                    class="indicator-line"
+                    style="animation-delay: 0.4s"
+                  ></div>
+                </button>
+              </div>
+            </nav>
+          </header>
+        </div>
+        <div class="relative h-dvh w-screen overflow-x-hidden">
+          <div
+            id="video-frame"
+            class="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
+            style="
+              border-radius: 0%;
+              clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            "
+          >
+            <div>
+              <div
+                class="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg"
+                style="border-radius: 8px; height: 256px; width: 256px"
+              >
+                <div
+                  class="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+                >
+                  <video
+                    src="videos/hero-1.mp4"
+                    loop=""
+                    id="current-video"
+                    class="size-64 origin-center scale-150 object-cover object-center"
+                    style="
+                      transform: scale(1.5, 1.5);
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 128px 128px;
+                    "
+                  ></video>
+                </div>
+              </div>
+              <video
+                src="videos/hero-4.mp4"
+                loop=""
+                id="next-video"
+                class="absolute-center invisible absolute z-20 size-64 object-cover object-center"
+                style="
+                  transform: translate(-50%, -50%);
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  visibility: visible;
+                  height: 100%;
+                  width: 100%;
+                  transform-origin: 50% 50%;
+                "
+              ></video
+              ><video
+                src="videos/hero-4.mp4"
+                autoplay=""
+                loop=""
+                class="absolute left-0 top-0 size-full object-cover object-center"
+              ></video>
+            </div>
+            <h1
+              class="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100"
+            >
+              G<b>A</b>MING
+            </h1>
+            <div class="absolute left-0 top-0 z-40 size-full">
+              <div class="mt-24 px-5 sm:px-10">
+                <h1 class="special-font hero-heading text-blue-100">
+                  redefi<b>n</b>e
+                </h1>
+                <p class="mb-5 max-w-64 font-robert-regular text-blue-100">
+                  Enter the Metagame Layer <br />
+                  Unleash the Play Economy
+                </p>
+                <button
+                  id="watch-trailer"
+                  class="group relative z-10 cursor-pointer w-fit overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black bg-yellow-300 flex-center gap-1"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.2"
+                    baseProfile="tiny"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.368 19.102c.349 1.049 1.011 1.086 1.478.086l5.309-11.375c.467-1.002.034-1.434-.967-.967l-11.376 5.308c-1.001.467-.963 1.129.085 1.479l4.103 1.367 1.368 4.102z"
+                    ></path></svg
+                  ><span
+                    class="relative inline-flex overflow-hidden font-general text-xs uppercase"
+                    ><div>Watch trailer</div></span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <h1
+            class="special-font hero-heading absolute bottom-5 right-5 text-black"
+          >
+            G<b>A</b>MING
+          </h1>
+        </div>
+        <div id="about" class="min-h-screen w-screen">
+          <div class="relative mb-8 mt-36 flex flex-col items-center gap-5">
+            <h2 class="font-general text-sm uppercase md:text-[10px]">
+              Welcome to Zentry
+            </h2>
+            <div class="animated-title mt-5 !text-black text-center">
+              <div
+                class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+              >
+                <span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 157.794px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  >Disc<b>o</b>ver</span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 59.35px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  >the</span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 139.812px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  >world's</span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 0px 0px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                ></span>
+              </div>
+              <div
+                class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+              >
+                <span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 0px 0px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                ></span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 139.944px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  >largest</span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 125.062px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  >shared</span
+                ><span
+                  class="animated-word"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform-origin: 186.244px 38.4px;
+                    transform: translate3d(109.512px, 147.418px, -152.547px)
+                      rotate(0.0004deg) rotateY(60.0001deg) rotateX(-39.9998deg);
+                    opacity: 0;
+                  "
+                  ><b>a</b>dventure</span
+                >
+              </div>
+            </div>
+            <div class="about-subtext">
+              <p>The Game of Game begins-your life, now an epic MMORPG</p>
+              <p>
+                Zebtry unites every players from countless games and platform
+              </p>
+            </div>
+          </div>
+          <div
+            class="pin-spacer"
+            style="
+              order: 0;
+              place-self: auto;
+              grid-area: auto;
+              z-index: auto;
+              float: none;
+              flex-shrink: 1;
+              display: block;
+              margin: 0px;
+              inset: auto;
+              position: relative;
+              flex-basis: auto;
+              overflow: visible;
+              box-sizing: border-box;
+              width: 1440px;
+              height: 962px;
+              padding: 0px 0px 800px;
+            "
+          >
+            <div
+              id="clip"
+              class="h-dvh w-screen"
+              style="
+                translate: none;
+                rotate: none;
+                scale: none;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                max-width: 1440px;
+                width: 1440px;
+                max-height: 162.4px;
+                height: 162.4px;
+                padding: 0px;
+                transform: translate(0px, 0px);
+              "
+            >
+              <div
+                class="mask-clip-path about-image"
+                style="border-radius: 24px; height: 437.75px; width: 460.8px"
+              >
+                <img
+                  alt="background"
+                  class="absolute left-0 top-0 size-full object-cover"
+                  src="img/about.webp"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="bg-black pb-52">
+          <div class="container mx-auto px-3 md:px-10">
+            <div class="px-5 py-32">
+              <p class="font-circular-web text-blue-50 text-lg">
+                Into the Metagame Layer
+              </p>
+              <p
+                class="font-circular-web max-w-md text-lg text-blue-50 opacity-50"
+              >
+                "The world broke long ago. Empires turned to smoke, and the
+                brave were buried beneath silence. But fire never forgets. It
+                waits. It tests. It chooses. And now, it has chosen you."
+              </p>
+            </div>
+            <div
+              class="border-hsla relative mb-7 w-full overflow-hidden h-96 rounded-md md:h-[65vh]"
+            >
+              <div class="relative size-full">
+                <video
+                  src="videos/feature-1.mp4"
+                  loop=""
+                  autoplay=""
+                  class="absolute left-0 top-0 size-full object-cover object-center"
+                ></video>
+                <div
+                  class="relative z-10 flex size-full justify-between flex-col p-5 text-blue-50"
+                >
+                  <div>
+                    <h1 class="bento-title special-font">radia<b>n</b>t</h1>
+                    <p class="mt-3 text-xs max-w-64 md:text-base">
+                      Legends aren’t found in stories, they’re built in battles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
+              <div class="bento-tilt-1 row-span-1 md:col-span-1 md:row-span-2">
+                <div class="relative size-full">
+                  <video
+                    src="videos/feature-2.mp4"
+                    loop=""
+                    autoplay=""
+                    class="absolute left-0 top-0 size-full object-cover object-center"
+                  ></video>
+                  <div
+                    class="relative z-10 flex size-full justify-between flex-col p-5 text-blue-50"
+                  >
+                    <div>
+                      <h1 class="bento-title special-font">Zigma</h1>
+                      <p class="mt-3 text-xs max-w-64 md:text-base">
+                        They said I couldn’t do it—so I did it twice, just to
+                        flex.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bento-tilt-1 row-span-1 ms-32 md:col-span-1 md:ms-0">
+                <div class="relative size-full">
+                  <video
+                    src="videos/feature-3.mp4"
+                    loop=""
+                    autoplay=""
+                    class="absolute left-0 top-0 size-full object-cover object-center"
+                  ></video>
+                  <div
+                    class="relative z-10 flex size-full justify-between flex-col p-5 text-blue-50"
+                  >
+                    <div>
+                      <h1 class="bento-title special-font">nexus</h1>
+                      <p class="mt-3 text-xs max-w-64 md:text-base">
+                        A Gamified social hub, adding new Dimentions of Games.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bento-tilt-1 me-14 md:col-span-1 md:me-0">
+                <div class="relative size-full">
+                  <video
+                    src="videos/feature-4.mp4"
+                    loop=""
+                    autoplay=""
+                    class="absolute left-0 top-0 size-full object-cover object-center"
+                  ></video>
+                  <div
+                    class="relative z-10 flex size-full justify-between flex-col p-5 text-blue-50"
+                  >
+                    <div>
+                      <h1 class="bento-title special-font">azul</h1>
+                      <p class="mt-3 text-xs max-w-64 md:text-base">
+                        A cross-world AI Agent - elevating your gameplay.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bento-tilt-2">
+                <div
+                  class="flex size-full flex-col justify-between bg-violet-700 p-5"
+                >
+                  <h1 class="bento-title special-font text-black max-w-64">
+                    More Coming Soon!
+                  </h1>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.2"
+                    baseProfile="tiny"
+                    viewBox="0 0 24 24"
+                    class="m-5 scale-[5] self-end"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.368 19.102c.349 1.049 1.011 1.086 1.478.086l5.309-11.375c.467-1.002.034-1.434-.967-.967l-11.376 5.308c-1.001.467-.963 1.129.085 1.479l4.103 1.367 1.368 4.102z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="bento-tilt-2">
+                <video
+                  src="videos/feature-5.mp4"
+                  loop=""
+                  autoplay=""
+                  class="size-full object-center object-cover"
+                ></video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="story" class="min-h-dvh w-screen bg-black text-blue-50">
+          <div class="flex size-full flex-col items-center py-10 pb-24">
+            <p class="font-general text-sm uppercase md:text-[10px]">
+              the multiversal ip world
+            </p>
+            <div class="relative size-full">
+              <div
+                class="animated-title mt-5 pointer-events-none mix-blend-difference relative z-10"
+              >
+                <div
+                  class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+                >
+                  <span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 59.35px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >the</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 105.731px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >story</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 39.45px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >of</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 0px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    ><br /></span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 22.6938px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >a</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 115.119px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >hidden</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 105.431px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >realm</span
+                  >
+                </div>
+              </div>
+              <div class="story-img-container">
+                <div class="story-img-mask">
+                  <div class="story-img-content">
+                    <img
+                      alt="entrance"
+                      class="object-contain"
+                      src="/img/entrance.webp"
+                    />
+                  </div>
+                </div>
+                <svg
+                  class="invisible absolute size-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <filter id="flt_tag">
+                      <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="8"
+                        result="blur"
+                      ></feGaussianBlur>
+                      <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                        result="flt_tag"
+                      ></feColorMatrix>
+                      <feComposite
+                        in="SourceGraphic"
+                        in2="flt_tag"
+                        operator="atop"
+                      ></feComposite>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end"
+            >
+              <div
+                class="flex h-full w-fit flex-col items-center md:items-start"
+              >
+                <p
+                  class="text-center mt-3 max-w-sm font-circular-web text-violet-50 md:text-start"
+                >
+                  "Not all realms are ruled by kings some are kept alive by
+                  whispers and will."
+                </p>
+                <button
+                  id="realm-button"
+                  class="group relative z-10 cursor-pointer w-fit overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black mt-5"
+                >
+                  <span
+                    class="relative inline-flex overflow-hidden font-general text-xs uppercase"
+                    ><div>discover prologue</div></span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="contact" class="my-20 min-h-96 w-screen px-10">
+          <div
+            class="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden"
+          >
+            <div
+              class="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96"
+            >
+              <div class="contact-clip-path-1">
+                <img src="/img/contact-1.webp" />
+              </div>
+              <div class="contact-clip-path-2 lg:translate-y-40 translate-y-60">
+                <img src="/img/contact-2.webp" />
+              </div>
+            </div>
+            <div
+              class="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80"
+            >
+              <div class="absolute md:scale-125">
+                <img src="/img/swordman-partial.webp" />
+              </div>
+              <div class="sword-man-clip-path md:scale-125">
+                <img src="/img/swordman.webp" />
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <p class="mb-10 font-general text-[10px] uppercase">
+                Join Zentry
+              </p>
+              <div class="animated-title undefined">
+                <div
+                  class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+                >
+                  <span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 84.5687px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >let's</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 92.2125px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >b<b>u</b>ild</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 59.35px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >the</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 0px 0px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                  ></span>
+                </div>
+                <div
+                  class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+                >
+                  <span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 0px 0px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                  ></span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 67.55px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >new</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 61.1813px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >era</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 39.45px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >of</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 0px 0px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                  ></span>
+                </div>
+                <div
+                  class="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+                >
+                  <span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 0px 0px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                  ></span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 126.331px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >g<b>a</b>ming</span
+                  ><span
+                    class="animated-word"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform-origin: 171.238px 38.4px;
+                      transform: translate3d(109.512px, 147.418px, -152.547px)
+                        rotate(0.0004deg) rotateY(60.0001deg)
+                        rotateX(-39.9998deg);
+                      opacity: 0;
+                    "
+                    >t<b>o</b>gether.</span
+                  >
+                </div>
+              </div>
+              <button
+                class="group relative z-10 cursor-pointer w-fit overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black mt-10 cursor-pointer"
+              >
+                <span
+                  class="relative inline-flex overflow-hidden font-general text-xs uppercase"
+                  ><div>contact us</div></span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer class="w-screen bg-[#5542ff] py-4 text-black">
+          <div
+            class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row"
+          >
+            <p class="text-center text-sm font-light md:text-left">
+              © Apr 2025.All rights reserved.<br />Made with ❤️ by @Irfan.
+            </p>
+            <div class="flex justify-center gap-4 md:justify-start">
+              <a
+                href="https://discord.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black transition-colors duration-500 ease-in-out hover:text-white"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 640 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                  ></path></svg></a
+              ><a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black transition-colors duration-500 ease-in-out hover:text-white"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  ></path></svg></a
+              ><a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black transition-colors duration-500 ease-in-out hover:text-white"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 576 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                  ></path></svg></a
+              ><a
+                href="https://medium.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black transition-colors duration-500 ease-in-out hover:text-white"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"
+                  ></path></svg
+              ></a>
+            </div>
+            <a
+              href="#privacy-policy"
+              class="text-center text-sm font-light hover:underline md:text-right"
+              >Privacy Policy</a
+            >
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
