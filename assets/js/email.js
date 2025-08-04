@@ -45,16 +45,16 @@ function sendMail() {
   const sendEmails = (params) => {
     // 1. Company Notification
     emailjs
-      .send("service_89pthg3", "template_uspi0gq", {
+      .send("service_9o0jxmd", "template_5xldgnh", {
         ...params,
-        company_email: "tuckerlord1@gmail.com",
+        company_email: "nexgennextopia@gmail.com",
       })
       .then(() => console.log("✅ Admin email sent"))
       .catch((err) => console.error("❌ Admin email failed:", err));
 
     // 2. Auto-reply to User
     emailjs
-      .send("service_89pthg3", "template_jtunp1t", params)
+      .send("service_9o0jxmd", "template_5xldgnh", params)
       .then(() => console.log("✅ Auto-reply sent to user"))
       .catch((err) => console.error("❌ Auto-reply failed:", err));
   };

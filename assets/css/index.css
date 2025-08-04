@@ -271,6 +271,7 @@ img {
   vertical-align: middle;
   max-width: 100%;
   display: inline-block;
+  box-shadow:  red;
 }
 
 html.w-mod-touch * {
@@ -2405,6 +2406,9 @@ figure {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
+  text-justify: inter-word; /* Use space between words only */
+  /* Break long words cleanly */
+  word-break: normal;
 }
 
 .body-text-default-medium.semibold {
@@ -10032,7 +10036,7 @@ figure {
   }
 
   .service-item-title-block {
-    max-width: 65%;
+    max-width: 100%;
     padding-left: 0;
   }
 

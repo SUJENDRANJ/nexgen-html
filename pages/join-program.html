@@ -58,7 +58,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "6fgq3ZgYrgI9-8Ah9",
+          publicKey: "CEpVxXGdZwEelBHCa",
         });
       })();
     </script>
@@ -181,6 +181,63 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- Price amount -->
+      <style>
+        .pricing-table {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          border-collapse: collapse;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-top: 30px;
+          font-size: 1.2rem;
+        }
+        .pricing-table th,
+        .pricing-table td {
+          padding: 12px 20px;
+          border: 1px solid #ddd;
+          text-align: center;
+        }
+        .pricing-table th {
+          background-color: #f5f5f5;
+          font-weight: bold;
+        }
+        .pricing-table td:last-child {
+          text-align: center;
+        }
+      </style>
+
+      <section style="text-align: center; margin: 50px">
+        <h2>PRICE DETAILS</h2>
+
+        <table class="pricing-table">
+          <tr>
+            <th>Duration</th>
+            <th>Price (₹)</th>
+          </tr>
+          <tr>
+            <td>7 Days</td>
+            <td>₹ 899</td>
+          </tr>
+          <tr>
+            <td>15 Days</td>
+            <td>₹ 1599</td>
+          </tr>
+          <tr>
+            <td>1 Month</td>
+            <td>₹ 2999</td>
+          </tr>
+          <tr>
+            <td>2 Months</td>
+            <td>₹ 4499</td>
+          </tr>
+          <tr>
+            <td>3 Months</td>
+            <td>₹ 5999</td>
+          </tr>
+        </table>
       </section>
 
       <!-- pages -->
@@ -398,12 +455,27 @@
                     class="select-field w-select"
                   >
                     <option value="">Select Internship Domain</option>
+                    <option value="Full Stack Development">
+                      Full Stack Development
+                    </option>
                     <option value="Frontend Development">
                       Frontend Development
                     </option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="AI/ML">AI/ML</option>
-                    <option value="App Development">App Development</option>
+                    <option value="Backend Development">
+                      Backend Development
+                    </option>
+                    <option value="Embedded Systems & IoT">
+                      Embedded Systems & IoT
+                    </option>
+                    <option value="AR/VR Development">AR/VR Development</option>
+                    <option value="3D Modelling / Designing">
+                      3D Modelling / Designing
+                    </option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Deep Learning">Deep Learning</option>
+                    <option value="iOS Developer">iOS Developer</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
                   </select>
                 </div>
               </div>
@@ -421,6 +493,8 @@
                     class="select-field w-select"
                   >
                     <option value="">Select Program Duration</option>
+                    <option value="1 Month">7 Days</option>
+                    <option value="1 Month">15 Days</option>
                     <option value="1 Month">1 Month</option>
                     <option value="2 Months">2 Months</option>
                     <option value="3 Months">3 Months</option>
