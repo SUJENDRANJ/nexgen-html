@@ -106,445 +106,642 @@
         </div>
       </section>
 
-      <section id="venture-program" style="padding: 4rem 2rem">
-        <div style="max-width: 960px; margin: auto">
-          <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #222">
-            Launch Bold Ideas with NexGen Nextopia
-          </h2>
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #555">
-            Our venture program provides end-to-end support for innovators
-            aiming to bring their ideas to life. We go beyond mentoring —
-            offering funding access, technical resources, and exposure
-            opportunities.
-          </p>
+      <!-- pages -->
+      <style>
+        .contact-wrapper {
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          margin-top: 70px;
+          margin-bottom: 70px;
+        }
 
-          <h3 style="margin-top: 2rem; font-size: 1.75rem; color: #333">
-            What We Offer:
-          </h3>
-          <ul
-            style="
-              margin: 1rem 0 2rem 1.5rem;
-              color: #444;
-              font-size: 1.05rem;
-              line-height: 1.8;
-            "
+        .text-field-item-block {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 16px;
+          margin-bottom: 16px;
+        }
+
+        .text-field-item {
+          flex: 1 1 calc(50% - 10px); /* Two per row */
+          min-width: 240px;
+        }
+
+        .text-field.w-input,
+        .select-field.w-select,
+        .text-area {
+          width: 100%;
+          font-size: 16px;
+        }
+
+        textarea.text-area {
+          min-height: 120px;
+          resize: vertical;
+        }
+
+        .form-button-block {
+          margin-top: 24px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .text-field-item img {
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+        }
+
+        /* Responsive for tablet and below */
+        @media screen and (max-width: 768px) {
+          .text-field-item-block {
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: center;
+          }
+
+          .text-field-item {
+            flex: 1 1 100%;
+            width: 100%;
+            min-width: unset;
+          }
+
+          .form-button-block {
+            /* flex-direction: column; */
+            gap: 12px;
+          }
+
+          .contact-form {
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .primary-button-text-2 button,
+          .primary-button-text-2 input {
+            font-size: 16px;
+            padding: 10px 16px;
+          }
+
+          .contact-wrapper {
+            padding: 12px;
+          }
+        }
+      </style>
+
+      <section>
+        <div
+          class="contact-wrapper"
+          id="page-1"
+          style="display: flex; justify-content: center"
+        >
+          <form
+            style="max-width: 800px; width: 100%"
+            id="email-form"
+            name="email-form"
+            data-name="Email Form"
+            method="get"
+            class="contact-form"
+            data-wf-page-id="6821bc4f049a687ff82eaecc"
+            data-wf-element-id="79598cef-54c6-8753-7d44-f44d72f8a37e"
           >
-            <li>Ideation and validation workshops</li>
-            <li>Business model refinement and market research</li>
-            <li>One-on-one mentoring from startup veterans</li>
-            <li>Seed funding access and pitch preparation</li>
-            <li>Co-working spaces with technical infrastructure</li>
-            <li>Legal, compliance, and financial guidance</li>
-            <li>Demo days and investor meetups for funding prospects</li>
-          </ul>
+            <!-- Topic Selection Block -->
+            <div class="text-field-item-block">
+              <div class="text-field-item-block">
+                <div class="text-field-item">
+                  <input
+                    class="text-field w-input"
+                    type="text"
+                    name="FullName"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+                <div class="text-field-item">
+                  <input
+                    class="text-field w-input"
+                    type="email"
+                    name="Email"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+                <div class="text-field-item">
+                  <input
+                    class="text-field w-input"
+                    type="text"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="text-field-item">
+                  <input
+                    class="text-field w-input"
+                    type="text"
+                    name="City"
+                    placeholder="City / State"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="text-field-item">
+                <div class="select-text-field-block">
+                  <select
+                    id="SupportTopic"
+                    name="SupportTopic"
+                    class="select-field w-select"
+                    required
+                  >
+                    <option value="">Select Support Topic</option>
+                    <option value="workshop">
+                      Workshop – Ideation & Validation
+                    </option>
+                    <option value="marketing">
+                      Marketing – Business & Growth
+                    </option>
+                    <option value="mentorship">
+                      Mentorship – Expert Guidance
+                    </option>
+                    <option value="funding">Funding – Pitch & Capital</option>
+                    <option value="infrastructure">
+                      Infrastructure – Workspace & Tools
+                    </option>
+                    <option value="finance">
+                      Finance – Legal & Accounting
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
 
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #555">
-            Our venture arm nurtures startups that create measurable social,
-            economic, and technological impact.
-          </p>
-        </div>
-      </section>
-
-      <!-- <section class="contact-information-wrapper">
-        <div class="container">
-          <div class="contact-information-item-block">
-            <div
-              data-w-id="64b082fc-1302-297b-6e90-da70723790f2"
-              style="opacity: 0"
-              class="contact-information-item"
-            >
-              <div class="contact-info-icon">
-                <div class="contact-icon"></div>
-              </div>
-              <div class="contact-info-text-block">
-                <div class="contact-name-title">
-                  <div class="body-text-small text-semibold">Call us at</div>
-                </div>
-                <a href="tel:99999999" class="contact-item-link w-inline-block"
-                  ><div class="contact-item-text">999 9999</div></a
-                >
-              </div>
-            </div>
-            <div class="contact-information-divider"></div>
-            <div
-              data-w-id="50105788-d945-e6fc-7d73-71b005e54d8a"
-              style="opacity: 0"
-              class="contact-information-item _02"
-            >
-              <div class="contact-info-icon">
-                <div class="contact-icon"></div>
-              </div>
-              <div class="contact-info-text-block">
-                <div class="contact-name-title">
-                  <div class="body-text-small text-semibold">Email us on</div>
-                </div>
-                <a
-                  href="mailto:nexgennextopia@gmail.com"
-                  class="contact-item-link w-inline-block"
-                  ><div class="contact-item-text">
-                    nexgennextopia@gmail.com
-                  </div></a
-                >
-              </div>
-            </div>
-            <div class="contact-information-divider"></div>
-            <div
-              data-w-id="ca4503fc-e954-63b9-01f5-508e308b36ea"
-              style="opacity: 0"
-              class="contact-information-item"
-            >
-              <div class="contact-info-icon">
-                <div class="contact-icon"></div>
-              </div>
-              <div class="contact-info-text-block">
-                <div class="contact-name-title">
-                  <div class="body-text-small text-semibold">Call us at</div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-item-text-02">
-                    Tiruchengode, Namakkal Dt.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="hubs" class="hubs-wrapper">
-        <div class="container">
-          <div class="our-hubs-content-block">
-            <div class="section-heading-content">
-              <div class="section-heading">
-                <div
-                  data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b650"
-                  style="opacity: 0"
-                  class="hubs-heading-title"
-                >
-                  Our Hubs
-                </div>
-              </div>
+            <!-- Dynamic Topic Fields -->
+            <div id="dynamic-topic-fields" class="text-field-item-block"></div>
+            <div class="form-button-block">
               <div
-                data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b652"
-                style="opacity: 0"
-                class="section-heading-information-categories none"
+                data-w-id="fbab2baa-3a8f-4b14-b095-b9a4be041e3b"
+                class="primary-button-2 outline"
               >
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">location</div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">
-                    Built for Vision
+                <div class="primary-all-content outline-2">
+                  <div class="primary-button-arrow-block-2 outline-3">
+                    <div class="primary-button-arrow-2 two"></div>
                   </div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">Creativity</div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">
-                    Powering Ideas
+                  <div class="primary-button-text-2 outline-5">
+                    <button type="submit" class="submit-button w-button">
+                      Submit
+                    </button>
                   </div>
-                </div>
-                <div class="heading-categories-item dark">
-                  <div class="body-text-small text-semibold">Space to Grow</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hubs-item-block">
-          <div
-            data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b663"
-            style="opacity: 0"
-            class="hub-item"
-          >
-            <div class="container">
-              <div class="hub-item-content">
-                <div class="hub-item-number">
-                  <div class="body-text-default-regular text-semibold">01</div>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div
-                  style="color: rgb(91, 91, 95)"
-                  class="hub-item-title-block"
-                >
-                  <h2 class="hub-item-title">new york</h2>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div class="hub-description-and-time">
                   <div
-                    style="opacity: 0; width: 0px"
-                    class="hub-time-information"
+                    style="opacity: 0; width: 0px; height: 0px"
+                    class="primary-button-arrow-block-right-2"
                   >
-                    <div class="body-text-small">
-                      <span class="clock-icon"> </span>9:00AM
-                    </div>
-                  </div>
-                  <div class="hub-description">
-                    <p class="body-text-default-medium">
-                      Kleiner Burstah 1, 20457 Hamburg, Germany
-                    </p>
+                    <div class="primary-button-arrow-2"></div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b677"
-            style="opacity: 0"
-            class="hub-item"
-          >
-            <div class="container">
-              <div class="hub-item-content">
-                <div class="hub-item-number">
-                  <div class="body-text-default-regular text-semibold">02</div>
-                </div>
-                <div class="hub-divided-border"></div>
                 <div
-                  style="color: rgb(91, 91, 95)"
-                  class="hub-item-title-block"
-                >
-                  <h2 class="hub-item-title">london</h2>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div class="hub-description-and-time">
-                  <div
-                    style="opacity: 0; width: 0px"
-                    class="hub-time-information"
-                  >
-                    <div class="body-text-small">
-                      <span class="clock-icon"> </span>9:00AM
-                    </div>
-                  </div>
-                  <div class="hub-description">
-                    <p class="body-text-default-medium">
-                      Hartmann Rd, London E16 2PX, United Kingdom
-                    </p>
-                  </div>
-                </div>
+                  style="width: 0%; height: 100%"
+                  class="button-hover-bg-outline"
+                ></div>
               </div>
             </div>
-          </div>
-          <div
-            data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b68b"
-            style="opacity: 0"
-            class="hub-item"
-          >
-            <div class="container">
-              <div class="hub-item-content">
-                <div class="hub-item-number">
-                  <div class="body-text-default-regular text-semibold">03</div>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div
-                  style="color: rgb(91, 91, 95)"
-                  class="hub-item-title-block"
-                >
-                  <h2 class="hub-item-title">japan</h2>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div class="hub-description-and-time">
-                  <div
-                    style="opacity: 0; width: 0px"
-                    class="hub-time-information"
-                  >
-                    <div class="body-text-small">
-                      <span class="clock-icon"> </span>9:00AM
-                    </div>
-                  </div>
-                  <div class="hub-description">
-                    <p class="body-text-default-medium">
-                      Suggest an edit on Japan Garden City - Building D-18
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-w-id="13e8fbe4-89e5-a4ac-8403-986295b7b69f"
-            style="opacity: 0"
-            class="hub-item bottom-border"
-          >
-            <div class="container">
-              <div class="hub-item-content">
-                <div class="hub-item-number">
-                  <div class="body-text-default-regular text-semibold">04</div>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div
-                  style="color: rgb(91, 91, 95)"
-                  class="hub-item-title-block"
-                >
-                  <h2 class="hub-item-title">belgium</h2>
-                </div>
-                <div class="hub-divided-border"></div>
-                <div class="hub-description-and-time">
-                  <div
-                    style="opacity: 0; width: 0px"
-                    class="hub-time-information"
-                  >
-                    <div class="body-text-small">
-                      <span class="clock-icon"> </span>9:00AM
-                    </div>
-                  </div>
-                  <div class="hub-description">
-                    <p class="body-text-default-medium">
-                      1 William St, Darlinghurst NSW 2010, Australia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <div class="contact-wrapper">
-        <div class="container">
-          <div class="contact-conetent-block">
-            <div
-              data-w-id="950ab193-e4c6-6619-fc2d-f49ca720c263"
-              style="opacity: 0"
-              class="contact-image-block"
-            >
-              <img
-                src="https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/682982e0292840b5a736c9e6_Blog%20Gallery%20Image01.webp"
-                loading="lazy"
-                sizes="(max-width: 570px) 100vw, 570px"
-                srcset="
-                  https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/682982e0292840b5a736c9e6_Blog%20Gallery%20Image01-p-500.webp 500w,
-                  https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/682982e0292840b5a736c9e6_Blog%20Gallery%20Image01.webp       570w
-                "
-                alt="Poomo Template-Blog Gallery Image01"
-                class="image-cover"
-              />
-            </div>
-            <div
-              data-w-id="e871530d-49c4-b615-3f06-47de2bdb4be5"
-              style="opacity: 0"
-              class="contact-block"
-            >
-              <div class="contact-heading-title-block">
-                <h3 class="contact-heading-title">Send Us a Message</h3>
-              </div>
-              <div class="contact-form-block w-form">
-                <form
-                  id="email-form"
-                  name="email-form"
-                  data-name="Email Form"
-                  method="get"
-                  class="contact-form"
-                  data-wf-page-id="6821bc4f049a687ff82eaecc"
-                  data-wf-element-id="79598cef-54c6-8753-7d44-f44d72f8a37e"
-                >
-                  <div class="text-field-item-block">
-                    <div class="text-field-item">
-                      <input
-                        class="text-field w-input"
-                        maxlength="256"
-                        name="name"
-                        data-name="Name"
-                        placeholder="Your Name"
-                        type="text"
-                        id="name"
-                        required=""
-                      />
-                    </div>
-                    <div class="text-field-item">
-                      <input
-                        class="text-field w-input"
-                        maxlength="256"
-                        name="Email"
-                        data-name="Email"
-                        placeholder="Your Email"
-                        type="email"
-                        id="Email"
-                        required=""
-                      />
-                    </div>
-                  </div>
-                  <div class="text-field-item-block">
-                    <div class="text-field-item">
-                      <div class="select-text-field-block">
-                        <select
-                          id="field"
-                          name="field"
-                          data-name="Field"
-                          required=""
-                          class="select-field w-select"
-                        >
-                          <option value="">Subject</option>
-                          <option value="UX/UI Design">UX/UI Design</option>
-                          <option value="Brand Identity">Brand Identity</option>
-                          <option value="Webflow">Webflow</option>
-                          <option value="Web Development">
-                            Web Development
-                          </option>
-                          <option value="App Development">
-                            App Development
-                          </option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-field-item-block">
-                    <div class="text-field-item">
-                      <textarea
-                        required=""
-                        placeholder="Write Message..."
-                        maxlength="5000"
-                        id="Text-Area"
-                        name="Text-Area"
-                        data-name="Text Area"
-                        class="text-area w-input"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="form-button-block">
-                    <div
-                      data-w-id="fbab2baa-3a8f-4b14-b095-b9a4be041e3b"
-                      class="primary-button-2 outline"
-                    >
-                      <div class="primary-all-content outline-2">
-                        <div class="primary-button-arrow-block-2 outline-3">
-                          <div class="primary-button-arrow-2 two"></div>
-                        </div>
-                        <div class="primary-button-text-2 outline-5">
-                          <input
-                            type="submit"
-                            data-wait="Please wait..."
-                            class="submit-button w-button"
-                            value="Send a message"
-                          />
-                        </div>
-                        <div
-                          style="opacity: 0; width: 0px; height: 0px"
-                          class="primary-button-arrow-block-right-2"
-                        >
-                          <div class="primary-button-arrow-2"></div>
-                        </div>
-                      </div>
-                      <div
-                        style="width: 0%; height: 100%"
-                        class="button-hover-bg-outline"
-                      ></div>
-                    </div>
-                  </div>
-                </form>
-                <div class="success-message w-form-done">
-                  <div class="body-text-default-medium">
-                    Thank you! Your submission has been received!
-                  </div>
-                </div>
-                <div class="error-message w-form-fail">
-                  <div class="body-text-small text-medium">
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+              // emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+
+              const topicFieldMap = {
+                workshop: `
+      <h3>Workshop – Registration Form</h3>
+      <p>Participate in hands-on ideation and validation workshops designed to shape early-stage
+concepts into viable solutions. Collaborate, test, and refine ideas with expert guidance.</p>
+
+      <div class="text-field-item"><textarea class="text-area w-input" placeholder="What challenge or problem are you currently trying to solve?"></textarea></div>
+      <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you attended any workshops before? If yes, which ones?"></textarea></div>
+      <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a team, or are you an individual innovator?"></textarea></div>
+      <div class="text-field-item"><textarea class="text-area w-input" placeholder="What tools or technologies do you plan to use in your project?"></textarea></div>
+
+      <div class="text-field-item">
+        <div class="select-text-field-block">
+          <select id="Mode" class="select-field w-select" required>
+            <option value="">Preferred Workshop Format</option>
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
         </div>
       </div>
+
+      <div class="text-field-item">
+        <div class="select-text-field-block">
+          <select id="CommunicationMode" class="select-field w-select" required>
+            <option value="">Preferred Mode of Communication</option>
+            <option value="Email">Email</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Phone Call">Phone Call</option>
+            <option value="Video Call">Video Call</option>
+            <option value="In-Person">In-Person</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="text-field-item">
+        <div class="select-text-field-block">
+          <select id="Availability" class="select-field w-select" required>
+            <option value="">Select Your Availability</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+            <option value="Weekend Only">Weekend Only</option>
+            <option value="Any Time">Any Time</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="text-field-item">
+        <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+      </div>
+    `,
+                marketing: `
+  <h3>Marketing – Registration Form</h3>
+  <p>Access structured support for business model refinement and market research. Learn customer profiling, competitor analysis, and growth strategies.</p>
+
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a clearly defined customer segment?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you done any market research so far?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What marketing channels are you currently using (if any)?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for brand development or performance marketing?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you require assistance in creating a go-to-market strategy?"></textarea></div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="CommunicationMode" class="select-field w-select" required>
+        <option value="">Preferred Mode of Communication</option>
+        <option value="Email">Email</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Phone Call">Phone Call</option>
+        <option value="Video Call">Video Call (Zoom/Meet)</option>
+        <option value="In-Person">In-Person (if available)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="Availability" class="select-field w-select" required>
+        <option value="">Select Your Availability</option>
+        <option value="Morning">Morning (9 AM – 12 PM)</option>
+        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+        <option value="Evening">Evening (4 PM – 7 PM)</option>
+        <option value="Weekend Only">Weekend Only</option>
+        <option value="Any Time">Any Time</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+  </div>
+`,
+
+                mentorship: `
+  <h3>Mentorship – Registration Form</h3>
+  <p>Receive personalized one-on-one guidance from industry veterans and startup experts. Get support in strategic decisions, product development, and growth planning.</p>
+
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What specific area(s) do you seek mentorship in? (e.g., tech, sales, funding)"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you had any prior mentors or advisors?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="How frequently would you prefer mentoring sessions?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your biggest current challenge?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What are your short-term (3–6 months) goals?"></textarea></div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="CommunicationMode" class="select-field w-select" required>
+        <option value="">Preferred Mode of Communication</option>
+        <option value="Email">Email</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Phone Call">Phone Call</option>
+        <option value="Video Call">Video Call (Zoom/Meet)</option>
+        <option value="In-Person">In-Person (if available)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="Availability" class="select-field w-select" required>
+        <option value="">Select Your Availability</option>
+        <option value="Morning">Morning (9 AM – 12 PM)</option>
+        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+        <option value="Evening">Evening (4 PM – 7 PM)</option>
+        <option value="Weekend Only">Weekend Only</option>
+        <option value="Any Time">Any Time</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+  </div>
+`,
+                funding: `
+  <h3>Funding – Registration Form</h3>
+  <p>Prepare to raise capital with our seed funding access and pitch readiness program. Join demo days and investor meetups to connect with the right backers.</p>
+
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your current funding status? (Bootstrapped / Pre-seed / Seed)"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you prepared a pitch deck?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you participated in any investor meets or pitch sessions?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your intended fundraising amount (in INR)?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for equity or debt funding?"></textarea></div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="CommunicationMode" class="select-field w-select" required>
+        <option value="">Preferred Mode of Communication</option>
+        <option value="Email">Email</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Phone Call">Phone Call</option>
+        <option value="Video Call">Video Call (Zoom/Meet)</option>
+        <option value="In-Person">In-Person (if available)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="Availability" class="select-field w-select" required>
+        <option value="">Select Your Availability</option>
+        <option value="Morning">Morning (9 AM – 12 PM)</option>
+        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+        <option value="Evening">Evening (4 PM – 7 PM)</option>
+        <option value="Weekend Only">Weekend Only</option>
+        <option value="Any Time">Any Time</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+  </div>
+`,
+                infrastructure: `
+  <h3>Infrastructure – Registration Form</h3>
+  <p>Benefit from our fully-equipped co-working spaces and tech infrastructure to build, test, and launch your product in a collaborative environment.</p>
+
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of infrastructure do you need? (e.g., lab, testing, workspace)"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you require high-speed internet, power backup, or specialized tools?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="How many team members will use the facility?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Preferred working hours: Morning / Afternoon / Evening / Flexible"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you need any on-site technical support?"></textarea></div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="CommunicationMode" class="select-field w-select" required>
+        <option value="">Preferred Mode of Communication</option>
+        <option value="Email">Email</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Phone Call">Phone Call</option>
+        <option value="Video Call">Video Call (Zoom/Meet)</option>
+        <option value="In-Person">In-Person (if available)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="Availability" class="select-field w-select" required>
+        <option value="">Select Your Availability</option>
+        <option value="Morning">Morning (9 AM – 12 PM)</option>
+        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+        <option value="Evening">Evening (4 PM – 7 PM)</option>
+        <option value="Weekend Only">Weekend Only</option>
+        <option value="Any Time">Any Time</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+  </div>
+`,
+                finance: `
+  <h3>Finance – Registration Form</h3>
+  <p>Navigate the financial and legal landscape with expert advisory. Get assistance with compliance, company registration, taxation, and financial planning.</p>
+
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What stage is your startup in? (Idea / Registered / Revenue-generating)"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for help in accounting, taxation, or compliance?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a registered business entity? If yes, what type?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you faced any legal/regulatory hurdles recently?"></textarea></div>
+  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you like ongoing financial consulting or one-time support?"></textarea></div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="CommunicationMode" class="select-field w-select" required>
+        <option value="">Preferred Mode of Communication</option>
+        <option value="Email">Email</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Phone Call">Phone Call</option>
+        <option value="Video Call">Video Call (Zoom/Meet)</option>
+        <option value="In-Person">In-Person (if available)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <div class="select-text-field-block">
+      <select id="Availability" class="select-field w-select" required>
+        <option value="">Select Your Availability</option>
+        <option value="Morning">Morning (9 AM – 12 PM)</option>
+        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+        <option value="Evening">Evening (4 PM – 7 PM)</option>
+        <option value="Weekend Only">Weekend Only</option>
+        <option value="Any Time">Any Time</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-field-item">
+    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+  </div>
+  
+`,
+              };
+
+              emailjs.init("CEpVxXGdZwEelBHCa"); // Make sure to replace with your actual user ID
+
+              const dynamicBlock = document.getElementById(
+                "dynamic-topic-fields"
+              );
+              const topicSelect = document.getElementById("SupportTopic");
+
+              topicSelect.addEventListener("change", (e) => {
+                const value = e.target.value;
+                dynamicBlock.innerHTML = topicFieldMap[value] || "";
+              });
+
+              function getValue(selector) {
+                return document.querySelector(selector)?.value?.trim() || "—";
+              }
+
+              function getWorkshopFields() {
+                return `
+      <p><strong>Challenge:</strong> ${getValue(
+        'textarea[placeholder*="challenge"]'
+      )}</p>
+      <p><strong>Previous Workshops:</strong> ${getValue(
+        'textarea[placeholder*="attended"]'
+      )}</p>
+      <p><strong>Team or Individual:</strong> ${getValue(
+        'textarea[placeholder*="team"]'
+      )}</p>
+      <p><strong>Tools Used:</strong> ${getValue(
+        'textarea[placeholder*="tools"]'
+      )}</p>
+      <p><strong>Workshop Format:</strong> ${getValue("#Mode")}</p>
+      <p><strong>Communication:</strong> ${getValue("#CommunicationMode")}</p>
+      <p><strong>Availability:</strong> ${getValue("#Availability")}</p>
+      <p><strong>Comments:</strong> ${getValue(
+        'textarea[placeholder*="Comments"]'
+      )}</p>
+    `;
+              }
+
+              function getGenericTopicFields() {
+                // Extract all <textarea> fields inside the dynamic block
+                const textareas = [
+                  ...dynamicBlock.querySelectorAll("textarea"),
+                ];
+                const selects = [...dynamicBlock.querySelectorAll("select")];
+
+                let html = "";
+
+                textareas.forEach((ta) => {
+                  const label = ta.placeholder || ta.name || "Question";
+                  const value = ta.value.trim() || "—";
+                  html += `<p><strong>${label}:</strong> ${value}</p>`;
+                });
+
+                selects.forEach((sel) => {
+                  const label = sel.name || "Selection";
+                  const value = sel.value || "—";
+                  html += `<p><strong>${label}:</strong> ${value}</p>`;
+                });
+
+                return html || "No topic-specific fields filled.";
+              }
+
+              document
+                .getElementById("email-form")
+                .addEventListener("submit", function (e) {
+                  e.preventDefault();
+
+                  const selectedTopic = getValue("#SupportTopic");
+
+                  const templateParams = {
+                    full_name: getValue('input[placeholder="Full Name"]'),
+                    email: getValue('input[placeholder="Email Address"]'),
+                    phone: `${getValue('input[placeholder="+91"]')} ${getValue(
+                      'input[placeholder="Phone Number"]'
+                    )}`,
+                    city_state: getValue('input[placeholder="City / State"]'),
+                    support_topic: selectedTopic,
+                    topic_specific_questions:
+                      selectedTopic === "workshop"
+                        ? getWorkshopFields()
+                        : "No topic-specific fields filled.",
+                  };
+
+                  if (selectedTopic !== "workshop") {
+                    const getCheckedValues = (name) =>
+                      [
+                        ...dynamicBlock.querySelectorAll(
+                          `input[name="${name}"]:checked`
+                        ),
+                      ]
+                        .map((el) => el.value)
+                        .join(", ") || "-";
+
+                    const additionalComments =
+                      dynamicBlock.querySelector(
+                        'textarea[placeholder*="Additional Comments"]'
+                      )?.value || "-";
+
+                    templateParams.mode_of_communication =
+                      getCheckedValues("mode");
+                    templateParams.availability =
+                      getCheckedValues("availability");
+                    templateParams.additional_comments = additionalComments;
+                  }
+
+                  emailjs
+                    .send("service_9o0jxmd", "template_nps8tx7", templateParams)
+                    .then(() => {
+                      // Hide form and show thank you
+                      document.getElementById("email-form").style.display =
+                        "none";
+                      document.getElementById("thank-you").style.display =
+                        "flex";
+                    })
+                    .catch((error) => console.error("EmailJS error:", error));
+                });
+            </script>
+          </form>
+        </div>
+
+        <!-- Thank You -->
+        <div
+          class="contact-wrapper"
+          id="thank-you"
+          style="display: none; justify-content: center"
+        >
+          <div class="contact-block" style="text-align: center">
+            <h3 class="contact-heading-title">
+              Thank you for your application!
+            </h3>
+            <p>We’ve received your submission and will contact you shortly.</p>
+          </div>
+        </div>
+
+        <!-- <script>
+          const page1 = document.getElementById("page-1");
+          const page2 = document.getElementById("page-2");
+          const thankYou = document.getElementById("thank-you");
+
+          // Handle Next
+          // Handle Next with validation
+          page1
+            .querySelector("button[type='button']")
+            .addEventListener("click", () => {
+              const form = document.getElementById("email-form");
+
+              if (form.checkValidity()) {
+                // ✅ All required fields filled
+                page1.style.display = "none";
+                page2.style.display = "flex";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              } else {
+                // ❌ Show built-in browser validation tooltips
+                form.reportValidity();
+              }
+            });
+
+          // Handle Previous
+          page2
+            .querySelector("button[type='button']")
+            .addEventListener("click", () => {
+              page2.style.display = "none";
+              page1.style.display = "flex";
+            });
+
+          // Handle Submit
+          page2.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            page2.style.display = "none";
+            thankYou.style.display = "flex";
+            document.getElementById("email-form").reset(); // ❌ Move this
+            this.reset();
+          });
+        </script> -->
+      </section>
 
       <div class="footer-wrapper">
         <div class="footer-content">

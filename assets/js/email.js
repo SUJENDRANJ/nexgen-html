@@ -47,7 +47,7 @@ function sendMail() {
     emailjs
       .send("service_9o0jxmd", "template_5xldgnh", {
         ...params,
-        company_email: "nexgennextopia@gmail.com",
+        company_email: "nexgennextopia@gmail.comw",
       })
       .then(() => console.log("✅ Admin email sent"))
       .catch((err) => console.error("❌ Admin email failed:", err));
