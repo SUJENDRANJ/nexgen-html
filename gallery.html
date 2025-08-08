@@ -137,6 +137,7 @@
           let currentTitle = null;
           let isPreviewActive = false;
           let isTransitioning = false;
+          let currentIndex = null; // store active image index
 
           // config (uses dynamic imageCount)
           const config = {
@@ -160,11 +161,9 @@
 
           // INITIALIZE CARDS
           cards.forEach((card, i) => {
-            // read title into a data-attr (set this in Webflow as data-title = Name)
             const title = card.getAttribute("data-title");
             card.dataset.title = title;
 
-            // compute angle & store state
             const angle = (i / config.imageCount) * Math.PI * 2;
             transformState.push({
               angle,
@@ -178,7 +177,6 @@
               targetScale: 1,
             });
 
-            // position each card around the circle
             const x = config.radius * Math.cos(angle);
             const y = config.radius * Math.sin(angle);
             gsap.set(card, {
@@ -189,7 +187,6 @@
               transformOrigin: "center center",
             });
 
-            // click handler → open preview
             card.addEventListener("click", (e) => {
               if (!isPreviewActive && !isTransitioning) {
                 togglePreview(i);
@@ -200,6 +197,7 @@
 
           // PREVIEW OPEN
           function togglePreview(index) {
+            currentIndex = index; // store index
             isPreviewActive = true;
             isTransitioning = true;
 
@@ -209,7 +207,6 @@
             if (rotationRadians > Math.PI) rotationRadians -= Math.PI * 2;
             else if (rotationRadians < -Math.PI) rotationRadians += Math.PI * 2;
 
-            // reset all states
             transformState.forEach((s) => {
               s.currentRotation = s.targetRotation = 0;
               s.currentScale = s.targetScale = 1;
@@ -217,7 +214,6 @@
               s.currentY = s.targetY = 0;
             });
 
-            // animate gallery zoom+rotate
             gsap.to(gallery, {
               scale: 5,
               y: 1300,
@@ -239,7 +235,6 @@
               onComplete: () => (isTransitioning = false),
             });
 
-            // reset parallax
             gsap.to(parallaxState, {
               currentX: 0,
               currentY: 0,
@@ -256,7 +251,6 @@
               },
             });
 
-            // show title
             const titleText = cards[index].dataset.title;
             const p = document.createElement("p");
             p.classList.add("gallery_title");
@@ -264,7 +258,6 @@
             titleContainer.appendChild(p);
             currentTitle = p;
 
-            // split and animate words in
             const splitText = new SplitText(p, {
               type: "words",
               wordsClass: "word",
@@ -284,7 +277,6 @@
             if (isTransitioning) return;
             isTransitioning = true;
 
-            // animate title out
             if (currentTitle) {
               const words = currentTitle.querySelectorAll(".word");
               gsap.to(words, {
@@ -300,11 +292,9 @@
               });
             }
 
-            // determine base scale by viewport
             const vw = window.innerWidth;
             let baseScale = vw < 768 ? 0.6 : vw < 1200 ? 0.8 : 1;
 
-            // animate gallery back
             gsap.to(gallery, {
               scale: baseScale,
               x: 0,
@@ -414,10 +404,43 @@
             }
           });
 
+          // SWIPE DETECTION FOR NEXT/PREV
+          let touchStartX = 0;
+          let touchEndX = 0;
+
+          document.addEventListener("touchstart", (e) => {
+            if (!isPreviewActive) return;
+            touchStartX = e.touches[0].clientX;
+          });
+
+          document.addEventListener("touchend", (e) => {
+            if (!isPreviewActive) return;
+            touchEndX = e.changedTouches[0].clientX;
+            let diff = touchEndX - touchStartX;
+
+            if (Math.abs(diff) > 50) {
+              // threshold
+              if (diff < 0) {
+                // swipe left → next image
+                currentIndex = (currentIndex + 1) % config.imageCount;
+              } else {
+                // swipe right → previous image
+                currentIndex =
+                  (currentIndex - 1 + config.imageCount) % config.imageCount;
+              }
+
+              if (currentTitle) {
+                currentTitle.remove();
+                currentTitle = null;
+              }
+
+              togglePreview(currentIndex);
+            }
+          });
+
           // main animation loop
           function animate() {
             if (!isPreviewActive && !isTransitioning) {
-              // lerp parallax
               parallaxState.currentX +=
                 (parallaxState.targetX - parallaxState.currentX) *
                 config.lerpFactor;
@@ -433,7 +456,6 @@
                 rotation: parallaxState.currentZ,
               });
 
-              // lerp each card
               cards.forEach((card, i) => {
                 const s = transformState[i];
                 s.currentRotation +=
