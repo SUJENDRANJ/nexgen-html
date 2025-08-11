@@ -256,7 +256,7 @@
                   >
                     <option value="">Select Support Topic</option>
                     <option value="workshop">
-                      Workshop – Ideation & Validation
+                      Mentorship – Ideation & Validation
                     </option>
                     <option value="marketing">
                       Marketing – Business & Growth
@@ -270,6 +270,9 @@
                     </option>
                     <option value="finance">
                       Finance – Legal & Accounting
+                    </option>
+                    <option value="investorNetworking">
+                      Funding – Investor Networking
                     </option>
                   </select>
                 </div>
@@ -312,257 +315,299 @@
 
               const topicFieldMap = {
                 workshop: `
-      <h3>Workshop – Registration Form</h3>
-      <p>Participate in hands-on ideation and validation workshops designed to shape early-stage
-concepts into viable solutions. Collaborate, test, and refine ideas with expert guidance.</p>
+<h3>Workshop – Registration Form</h3>
+<p>Share your innovative project or idea and get connected with resources, guidance, and expert feedback to help bring it to life.</p>
 
-      <div class="text-field-item"><textarea class="text-area w-input" placeholder="What challenge or problem are you currently trying to solve?"></textarea></div>
-      <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you attended any workshops before? If yes, which ones?"></textarea></div>
-      <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a team, or are you an individual innovator?"></textarea></div>
-      <div class="text-field-item"><textarea class="text-area w-input" placeholder="What tools or technologies do you plan to use in your project?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Describe your project or idea in a few sentences."></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What challenge does your idea aim to solve?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you done any validation or early user testing?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a team working with you currently?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of feedback are you looking for through mentoring?"></textarea></div>
 
-      <div class="text-field-item">
-        <div class="select-text-field-block">
-          <select id="Mode" class="select-field w-select" required>
-            <option value="">Preferred Workshop Format</option>
-            <option value="Online">Online</option>
-            <option value="Offline">Offline</option>
-            <option value="Hybrid">Hybrid</option>
-          </select>
-        </div>
-      </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Mode" class="select-field w-select" required>
+      <option value="">Preferred Workshop Format</option>
+      <option value="Online">Online</option>
+      <option value="Offline">Offline</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+  </div>
+</div>
 
-      <div class="text-field-item">
-        <div class="select-text-field-block">
-          <select id="CommunicationMode" class="select-field w-select" required>
-            <option value="">Preferred Mode of Communication</option>
-            <option value="Email">Email</option>
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Phone Call">Phone Call</option>
-            <option value="Video Call">Video Call</option>
-            <option value="In-Person">In-Person</option>
-          </select>
-        </div>
-      </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call</option>
+      <option value="In-Person">In-Person</option>
+    </select>
+  </div>
+</div>
 
-      <div class="text-field-item">
-        <div class="select-text-field-block">
-          <select id="Availability" class="select-field w-select" required>
-            <option value="">Select Your Availability</option>
-            <option value="Morning">Morning</option>
-            <option value="Afternoon">Afternoon</option>
-            <option value="Evening">Evening</option>
-            <option value="Weekend Only">Weekend Only</option>
-            <option value="Any Time">Any Time</option>
-          </select>
-        </div>
-      </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning</option>
+      <option value="Afternoon">Afternoon</option>
+      <option value="Evening">Evening</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
+  </div>
+</div>
 
-      <div class="text-field-item">
-        <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
-      </div>
-    `,
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
+`,
                 marketing: `
-  <h3>Marketing – Registration Form</h3>
-  <p>Access structured support for business model refinement and market research. Learn customer profiling, competitor analysis, and growth strategies.</p>
+<h3>Marketing – Registration Form</h3>
+<p>Access structured support for business model refinement, market research, and strategic marketing to help you reach your target audience effectively.</p>
 
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a clearly defined customer segment?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you done any market research so far?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What marketing channels are you currently using (if any)?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for brand development or performance marketing?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you require assistance in creating a go-to-market strategy?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your current business model?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you identified your target customer?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you conducted any primary or secondary market research?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What marketing channels are you exploring or using?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you need help with digital strategy, branding, or outreach?"></textarea></div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="CommunicationMode" class="select-field w-select" required>
-        <option value="">Preferred Mode of Communication</option>
-        <option value="Email">Email</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Phone Call">Phone Call</option>
-        <option value="Video Call">Video Call (Zoom/Meet)</option>
-        <option value="In-Person">In-Person (if available)</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="Availability" class="select-field w-select" required>
-        <option value="">Select Your Availability</option>
-        <option value="Morning">Morning (9 AM – 12 PM)</option>
-        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
-        <option value="Evening">Evening (4 PM – 7 PM)</option>
-        <option value="Weekend Only">Weekend Only</option>
-        <option value="Any Time">Any Time</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
-  </div>
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
 `,
-
                 mentorship: `
-  <h3>Mentorship – Registration Form</h3>
-  <p>Receive personalized one-on-one guidance from industry veterans and startup experts. Get support in strategic decisions, product development, and growth planning.</p>
+<h3>Mentorship – Registration Form</h3>
+<p>Receive personalized one-on-one guidance from experienced mentors to help you navigate challenges, refine your strategy, and accelerate your growth.</p>
 
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What specific area(s) do you seek mentorship in? (e.g., tech, sales, funding)"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you had any prior mentors or advisors?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="How frequently would you prefer mentoring sessions?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your biggest current challenge?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What are your short-term (3–6 months) goals?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What stage is your startup currently in?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What is the biggest challenge you are facing?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Which areas do you need mentoring in? (e.g., tech, finance, operations)"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a short-term roadmap for the next 6 months?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="How often would you prefer mentoring sessions?"></textarea></div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="CommunicationMode" class="select-field w-select" required>
-        <option value="">Preferred Mode of Communication</option>
-        <option value="Email">Email</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Phone Call">Phone Call</option>
-        <option value="Video Call">Video Call (Zoom/Meet)</option>
-        <option value="In-Person">In-Person (if available)</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="Availability" class="select-field w-select" required>
-        <option value="">Select Your Availability</option>
-        <option value="Morning">Morning (9 AM – 12 PM)</option>
-        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
-        <option value="Evening">Evening (4 PM – 7 PM)</option>
-        <option value="Weekend Only">Weekend Only</option>
-        <option value="Any Time">Any Time</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
-  </div>
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
 `,
+
                 funding: `
-  <h3>Funding – Registration Form</h3>
-  <p>Prepare to raise capital with our seed funding access and pitch readiness program. Join demo days and investor meetups to connect with the right backers.</p>
+<h3>Funding – Registration Form</h3>
+<p>Prepare to raise capital with our seed funding access and pitch readiness program. Join demo days and investor meetups to connect with the right backers.</p>
 
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your current funding status? (Bootstrapped / Pre-seed / Seed)"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you prepared a pitch deck?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you participated in any investor meets or pitch sessions?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your intended fundraising amount (in INR)?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for equity or debt funding?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you raised any funds before? If yes, how much and from whom?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a pitch deck or business plan ready?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for funding through equity or grants?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your current funding requirement (in INR)?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you be open to attending investor meetups and demo days?"></textarea></div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="CommunicationMode" class="select-field w-select" required>
-        <option value="">Preferred Mode of Communication</option>
-        <option value="Email">Email</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Phone Call">Phone Call</option>
-        <option value="Video Call">Video Call (Zoom/Meet)</option>
-        <option value="In-Person">In-Person (if available)</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="Availability" class="select-field w-select" required>
-        <option value="">Select Your Availability</option>
-        <option value="Morning">Morning (9 AM – 12 PM)</option>
-        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
-        <option value="Evening">Evening (4 PM – 7 PM)</option>
-        <option value="Weekend Only">Weekend Only</option>
-        <option value="Any Time">Any Time</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
-  </div>
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
 `,
+
                 infrastructure: `
-  <h3>Infrastructure – Registration Form</h3>
-  <p>Benefit from our fully-equipped co-working spaces and tech infrastructure to build, test, and launch your product in a collaborative environment.</p>
+<h3>Infrastructure – Registration Form</h3>
+<p>Benefit from our fully-equipped co-working spaces and tech infrastructure to build, test, and launch your product in a collaborative environment.</p>
 
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of infrastructure do you need? (e.g., lab, testing, workspace)"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you require high-speed internet, power backup, or specialized tools?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="How many team members will use the facility?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Preferred working hours: Morning / Afternoon / Evening / Flexible"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you need any on-site technical support?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of workspace are you looking for? (e.g., private desk, open area, lab)"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="How many team members will use the space?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you need high-speed internet, backup power, or special tools?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Preferred working style: Full-time / Part-time / On-Demand"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you require any technical on-site support?"></textarea></div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="CommunicationMode" class="select-field w-select" required>
-        <option value="">Preferred Mode of Communication</option>
-        <option value="Email">Email</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Phone Call">Phone Call</option>
-        <option value="Video Call">Video Call (Zoom/Meet)</option>
-        <option value="In-Person">In-Person (if available)</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="Availability" class="select-field w-select" required>
-        <option value="">Select Your Availability</option>
-        <option value="Morning">Morning (9 AM – 12 PM)</option>
-        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
-        <option value="Evening">Evening (4 PM – 7 PM)</option>
-        <option value="Weekend Only">Weekend Only</option>
-        <option value="Any Time">Any Time</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
-  </div>
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
 `,
+
                 finance: `
-  <h3>Finance – Registration Form</h3>
-  <p>Navigate the financial and legal landscape with expert advisory. Get assistance with compliance, company registration, taxation, and financial planning.</p>
+<h3>Finance – Registration Form</h3>
+<p>Navigate the financial and legal landscape with expert advisory. Get assistance with compliance, company registration, taxation, and financial planning.</p>
 
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="What stage is your startup in? (Idea / Registered / Revenue-generating)"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you looking for help in accounting, taxation, or compliance?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a registered business entity? If yes, what type?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you faced any legal/regulatory hurdles recently?"></textarea></div>
-  <div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you like ongoing financial consulting or one-time support?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Is your startup currently registered? If yes, what type? (e.g., Pvt Ltd, LLP)"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of support do you need? (e.g., GST, trademark, MoU)"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you already have a financial advisor or legal consultant?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Are you seeking one-time documentation or ongoing compliance help?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you faced any legal/regulatory hurdles recently?"></textarea></div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="CommunicationMode" class="select-field w-select" required>
-        <option value="">Preferred Mode of Communication</option>
-        <option value="Email">Email</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Phone Call">Phone Call</option>
-        <option value="Video Call">Video Call (Zoom/Meet)</option>
-        <option value="In-Person">In-Person (if available)</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <div class="select-text-field-block">
-      <select id="Availability" class="select-field w-select" required>
-        <option value="">Select Your Availability</option>
-        <option value="Morning">Morning (9 AM – 12 PM)</option>
-        <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
-        <option value="Evening">Evening (4 PM – 7 PM)</option>
-        <option value="Weekend Only">Weekend Only</option>
-        <option value="Any Time">Any Time</option>
-      </select>
-    </div>
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
   </div>
+</div>
 
-  <div class="text-field-item">
-    <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
+`,
+
+                investorNetworking: `
+<h3>Investor Networking – Registration Form</h3>
+<p>Connect with investors and funding bodies through curated demo days and networking events. This form gathers your readiness and goals to match you with potential investors.</p>
+
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What kind of investors are you seeking? (e.g., Angel, VC, CSR-based)"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Have you attended any demo days or investor events before?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Do you have a working product or MVP?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="Would you be willing to travel or present online for funding events?"></textarea></div>
+<div class="text-field-item"><textarea class="text-area w-input" placeholder="What is your long-term funding vision?"></textarea></div>
+
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="CommunicationMode" class="select-field w-select" required>
+      <option value="">Preferred Mode of Communication</option>
+      <option value="Email">Email</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Phone Call">Phone Call</option>
+      <option value="Video Call">Video Call (Zoom/Meet)</option>
+      <option value="In-Person">In-Person (if available)</option>
+    </select>
   </div>
-  
+</div>
+
+<div class="text-field-item">
+  <div class="select-text-field-block">
+    <select id="Availability" class="select-field w-select" required>
+      <option value="">Select Your Availability</option>
+      <option value="Morning">Morning (9 AM – 12 PM)</option>
+      <option value="Afternoon">Afternoon (12 PM – 4 PM)</option>
+      <option value="Evening">Evening (4 PM – 7 PM)</option>
+      <option value="Weekend Only">Weekend Only</option>
+      <option value="Any Time">Any Time</option>
+    </select>
+  </div>
+</div>
+
+<div class="text-field-item">
+  <textarea class="text-area w-input" placeholder="Additional Comments (Optional)"></textarea>
+</div>
 `,
               };
 

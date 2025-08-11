@@ -271,7 +271,7 @@ img {
   vertical-align: middle;
   max-width: 100%;
   display: inline-block;
-  box-shadow:  red;
+  box-shadow: red;
 }
 
 html.w-mod-touch * {
@@ -3736,6 +3736,10 @@ figure {
   line-height: 1em;
 }
 
+.ventures-title {
+  font-size: 222px;
+}
+
 .project-item-block {
   grid-row-gap: 32px;
   flex-flow: column;
@@ -7104,6 +7108,9 @@ figure {
     font-size: 243px;
     line-height: 1em;
   }
+  .ventures-title {
+    font-size: 203px;
+  }
 
   .project-button-block {
     position: absolute;
@@ -7878,7 +7885,9 @@ figure {
   .project-heading-title {
     font-size: 142px;
   }
-
+  .ventures-title {
+    font-size: 110px;
+  }
   .project-item-block {
     width: 100%;
     margin-top: 60px;
@@ -9173,6 +9182,9 @@ figure {
   .project-heading-title {
     font-size: 103px;
   }
+  .ventures-title {
+    font-size: 80px;
+  }
 
   .project-item-block {
     margin-top: 60px;
@@ -10064,6 +10076,9 @@ figure {
 
   .project-heading-title {
     font-size: 65px;
+  }
+  .ventures-title {
+    font-size: 40px;
   }
 
   .project-item-block {
