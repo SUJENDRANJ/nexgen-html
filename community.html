@@ -980,7 +980,7 @@
               class="bg-vid xs--show"
             >
               <source
-                src="./assets/videos/community.mp4"
+                src="./assets/videos/community-mobile.mp4"
                 type="video/mp4"
               /></video
             ><video
@@ -1175,15 +1175,6 @@
                             CFP® Professional
                           </div>
                         </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1231,15 +1222,6 @@
                           <div data-t-fade="" class="p-small">
                             CFP® Professional
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1289,15 +1271,6 @@
                             CFP® Professional
                           </div>
                         </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1345,15 +1318,6 @@
                           <div data-t-fade="" class="p-small">
                             CFP® Professional
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1403,15 +1367,6 @@
                             CFP® Professional
                           </div>
                         </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1459,15 +1414,6 @@
                           <div data-t-fade="" class="p-small">
                             CFP® Professional
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1526,33 +1472,38 @@
                   bottom: 0;
                   left: 0;
                   right: 0;
-                  top: 0; /* cover the whole card */
-                  background: rgba(
-                    0,
-                    0,
-                    0,
-                    0.6
-                  ); /* semi-transparent dark overlay */
+                  top: 0; /* covers entire card */
+                  background: rgba(0, 0, 0, 0.6);
                   color: #fff;
                   display: flex;
                   flex-direction: column;
-                  justify-content: center; /* center vertically */
+                  justify-content: flex-end; /* push content to bottom */
                   align-items: center; /* center horizontally */
-                  opacity: 0; /* hidden by default */
+                  opacity: 0;
                   transition: opacity 0.4s ease;
                   text-align: center;
-                  padding-top: 200px;
+                  padding-bottom: 20px; /* space from bottom */
                 }
 
                 /* Text styles inside overlay */
                 .card-inner__info .p-med {
-                  font-size: 1.1rem;
+                  font-size: 0.8rem;
                   font-weight: bold;
+                  position: absolute;
+                  bottom: 2rem;
+                  opacity: 1;
+                  left: 0.2rem;
+                  right: 0.2rem;
                 }
 
                 .card-inner__info .p-small {
-                  font-size: 0.9rem;
+                  text-align: center;
+                  font-size: 0.6rem;
                   opacity: 1;
+                  bottom: 1rem;
+                  position: absolute;
+                  left: 0.2rem;
+                  right: 0.2rem;
                 }
 
                 /* Show overlay on hover */
@@ -1561,10 +1512,6 @@
                 }
 
                 /* Optional: zoom image/video on hover */
-                .card-inner img,
-                .card-inner video {
-                  transition: transform 0.4s ease;
-                }
               </style>
 
               <div data-cards-wrap="" class="g-card__wrap swiper w-dyn-list">
@@ -1605,21 +1552,10 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
-                            Nill
-                          </div>
+                          <div data-t-fade="" class="p-med fw--med">Nill</div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1656,25 +1592,17 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Dr. R. Prabu
                           </div>
                           <div data-t-fade="" class="p-small">
                             Associate Professor & Head
                           </div>
                         </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
+
                   <div
                     data-cursor="More about Bri"
                     data-card=""
@@ -1707,21 +1635,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mr. B. B. Sangameswaran
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1758,21 +1677,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Dr. A. Murugesan
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1809,21 +1719,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mrs. P. Sharon Chris Hepzebah
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1860,21 +1761,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mrs. T. Yamunarani
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1882,6 +1774,8 @@
                 </div>
               </div>
               <!-- end -->
+
+              <div style="margin: 5rem"></div>
 
               <div data-cards-wrap="" class="g-card__wrap swiper w-dyn-list">
                 <div
@@ -1921,21 +1815,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mrs. M. Brindha
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -1972,21 +1857,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med p-small fw--med">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mr. P. J. Ragu
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -2023,21 +1899,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Ms. V. D. Nandhini
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -2074,21 +1941,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mr. S. Parameswaran
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
@@ -2126,21 +1984,12 @@
                       </video>
                       <div class="card-inner__info">
                         <div>
-                          <div data-t-fade="" class="p-med fw--med p-small">
+                          <div data-t-fade="" class="p-med fw--med">
                             Mrs. P. Arulmozhi
                           </div>
                           <div data-t-fade="" class="p-small">
                             Assistant Professor
                           </div>
-                        </div>
-                        <div data-t-fade="" class="watch-btn">
-                          <div>Watch</div>
-                          <img
-                            src="https://cdn.prod.website-files.com/659f15a242e58eb40c8cf14b/65f094d57542a6445bda7eb0_icon.svg"
-                            loading="lazy"
-                            alt="play icon"
-                            class="watch-btn__icon"
-                          />
                         </div>
                       </div>
                     </div>
