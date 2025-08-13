@@ -474,6 +474,23 @@
                   scale: s.currentScale,
                   rotation: (s.angle * 180) / Math.PI + 90,
                 });
+
+                //select next card
+                card.addEventListener("click", (e) => {
+                  if (!isTransitioning) {
+                    if (!isPreviewActive) {
+                      togglePreview(i); // open normally
+                    } else if (i !== currentIndex) {
+                      // already in preview — switch to another image
+                      if (currentTitle) {
+                        currentTitle.remove();
+                        currentTitle = null;
+                      }
+                      togglePreview(i);
+                    }
+                    e.stopPropagation();
+                  }
+                });
               });
             }
             requestAnimationFrame(animate);

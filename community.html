@@ -6687,5 +6687,30 @@
     >
       🏠 Go to Home
     </button>
+
+    <script>
+      (function () {
+        function blockClick(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+
+        function ready() {
+          const cards = document.querySelectorAll(".g-card");
+          if (!cards.length) return;
+
+          cards.forEach((card) => {
+            card.addEventListener("click", blockClick, true);
+          });
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", ready);
+        } else {
+          ready();
+        }
+      })();
+    </script>
   </body>
 </html>
