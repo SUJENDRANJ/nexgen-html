@@ -2,6 +2,7 @@ function sendMail() {
   const form1 = document.getElementById("email-form");
   const form2 = document.getElementById("experience-form");
 
+  // Step 1: Collect form data
   const user_name = form1.name.value;
   const user_email = form1.Email.value;
   const user_phone = form1.Phone.value;
@@ -21,6 +22,7 @@ function sendMail() {
 
   const imgbbApiKey = "3123d94582cb67346c90b704764a0253";
 
+  // Prepare email parameters
   const buildParams = (screenshotUrl) => ({
     user_name,
     user_email,
@@ -41,18 +43,18 @@ function sendMail() {
   });
 
   const sendEmails = (params) => {
-    // Admin Notification
+    // 1. Company Notification
     emailjs
-      .send("service_9o0jxmd", "template_5xldgnh", {
+      .send("service_89pthg3", "template_uspi0gq", {
         ...params,
-        company_email: "nexgennextopia@gmail.com",
+        company_email: "tuckerlord1@gmail.com",
       })
       .then(() => console.log("✅ Admin email sent"))
       .catch((err) => console.error("❌ Admin email failed:", err));
 
-    // Auto-reply to User
+    // 2. Auto-reply to User
     emailjs
-      .send("service_9o0jxmd", "template_5xldgnh", params)
+      .send("service_89pthg3", "template_jtunp1t", params)
       .then(() => console.log("✅ Auto-reply sent to user"))
       .catch((err) => console.error("❌ Auto-reply failed:", err));
   };
@@ -61,6 +63,7 @@ function sendMail() {
     const reader = new FileReader();
     reader.onload = function () {
       const base64Image = reader.result.split(",")[1];
+
       const formData = new FormData();
       formData.append("key", imgbbApiKey);
       formData.append("image", base64Image);
@@ -72,15 +75,18 @@ function sendMail() {
         .then((res) => res.json())
         .then((data) => {
           const screenshotLink = data.data.url;
-          sendEmails(buildParams(screenshotLink));
+          const emailParams = buildParams(screenshotLink);
+          sendEmails(emailParams);
         })
         .catch((err) => {
           console.error("❌ ImgBB upload failed:", err);
-          sendEmails(buildParams("ImgBB upload failed"));
+          const fallbackParams = buildParams("ImgBB upload failed");
+          sendEmails(fallbackParams);
         });
     };
     reader.readAsDataURL(payment_ss_file);
   } else {
-    sendEmails(buildParams("No screenshot uploaded"));
+    const fallbackParams = buildParams("No screenshot uploaded");
+    sendEmails(fallbackParams);
   }
 }

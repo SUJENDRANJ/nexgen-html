@@ -537,7 +537,11 @@
                     <div class="primary-button-arrow-2 two"></div>
                   </div>
                   <div class="primary-button-text-2 outline-5">
-                    <button type="button" class="submit-button w-button">
+                    <button
+                      type="button"
+                      id="nextBtn"
+                      class="submit-button w-button"
+                    >
                       Next
                     </button>
                   </div>
@@ -571,10 +575,8 @@
               <form
                 id="experience-form"
                 name="experience-form"
-                data-name="Experience Form"
                 method="post"
                 class="contact-form"
-                onsubmit="sendMail(); return false;"
               >
                 <!-- Experience Info -->
                 <div class="text-field-item-block">
@@ -681,7 +683,11 @@
                           <div class="primary-button-arrow-2 two"></div>
                         </div>
                         <div class="primary-button-text-2 outline-5">
-                          <button type="button" class="submit-button w-button">
+                          <button
+                            type="button"
+                            id="prevBtn"
+                            class="submit-button w-button"
+                          >
                             Previous
                           </button>
                         </div>
@@ -746,43 +752,66 @@
         </div>
 
         <script>
-          const page1 = document.getElementById("page-1");
-          const page2 = document.getElementById("page-2");
-          const thankYou = document.getElementById("thank-you");
+          document.addEventListener("DOMContentLoaded", () => {
+            const form1 = document.getElementById("email-form");
+            const form2 = document.getElementById("experience-form");
+            const nextBtn = document.getElementById("nextBtn");
+            const prevBtn = document.getElementById("prevBtn");
+            const submitBtn = document.getElementById("submit-btn");
+            const page1 = document.getElementById("page-1");
+            const page2 = document.getElementById("page-2");
+            const thankYou = document.getElementById("thank-you");
 
-          // Handle Next
-          // Handle Next with validation
-          page1
-            .querySelector("button[type='button']")
-            .addEventListener("click", () => {
-              const form = document.getElementById("email-form");
+            // Disable Page 2 fields initially
+            toggleRequired(form2, false);
 
-              if (form.checkValidity()) {
-                // ✅ All required fields filled
+            function toggleRequired(form, enable) {
+              [...form.querySelectorAll("[required]")].forEach((el) => {
+                if (enable) {
+                  el.setAttribute("required", "");
+                } else {
+                  el.removeAttribute("required");
+                }
+              });
+            }
+
+            // Next button → validate page1 then show page2
+            nextBtn.addEventListener("click", () => {
+              if (form1.checkValidity()) {
                 page1.style.display = "none";
-                page2.style.display = "flex";
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                page2.style.display = "block";
+                toggleRequired(form1, false);
+                toggleRequired(form2, true);
               } else {
-                // ❌ Show built-in browser validation tooltips
-                form.reportValidity();
+                form1.reportValidity();
               }
             });
 
-          // Handle Previous
-          page2
-            .querySelector("button[type='button']")
-            .addEventListener("click", () => {
+            // Previous button → back to page1
+            prevBtn.addEventListener("click", () => {
               page2.style.display = "none";
-              page1.style.display = "flex";
+              page1.style.display = "block";
+              toggleRequired(form2, false);
+              toggleRequired(form1, true);
             });
 
-          // Handle Submit
-          page2.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            page2.style.display = "none";
-            thankYou.style.display = "flex";
-            document.getElementById("email-form").reset(); // ❌ Move this
-            this.reset();
+            // Submit → validate page2, call sendMail if available, then show thank-you
+            form2.addEventListener("submit", (e) => {
+              e.preventDefault();
+              if (form2.checkValidity()) {
+                if (typeof sendMail === "function") {
+                  sendMail();
+                }
+                page2.style.display = "none";
+                thankYou.style.display = "flex";
+                form1.reset();
+                form2.reset();
+                toggleRequired(form2, false);
+                toggleRequired(form1, true);
+              } else {
+                form2.reportValidity();
+              }
+            });
           });
         </script>
       </section>
@@ -1103,7 +1132,9 @@
       src="https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/js/webflow.schunk.36b8fb49256177c8.js"
       type="text/javascript"
     ></script>
+
     <script src="../assets/js/join-program.js" type="text/javascript"></script>
+
     <script
       src="https://cdn.prod.website-files.com/680473f6f2a870b1d28b3467/js/webflow.d684e34d.1f9bc974826fe80c.js"
       type="text/javascript"
