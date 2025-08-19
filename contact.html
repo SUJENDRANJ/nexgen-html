@@ -106,9 +106,7 @@
                     data-w-id="157ce8af-dbb3-4b09-d50a-72b31f76a9f2"
                     style="opacity: 0"
                     class="heading-01"
-                  >
-                    Get To
-                  </h1>
+                  ></h1>
                 </div>
               </div>
               <div class="inner-hero-heading-item">
@@ -118,7 +116,7 @@
                     style="opacity: 0"
                     class="inner-hero-headign-title"
                   >
-                    Join Now.
+                    Contact Us
                   </h2>
                 </div>
                 <a
@@ -209,57 +207,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Price amount -->
-      <style>
-        .pricing-table {
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-          border-collapse: collapse;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          margin-top: 30px;
-          font-size: 1.2rem;
-        }
-        .pricing-table th,
-        .pricing-table td {
-          padding: 12px 20px;
-          border: 1px solid #ddd;
-          text-align: center;
-        }
-        .pricing-table th {
-          background-color: #f5f5f5;
-          font-weight: bold;
-        }
-        .pricing-table td:last-child {
-          text-align: center;
-        }
-      </style>
-
-      <section style="text-align: center; margin: 50px">
-        <h2>PRICE DETAILS</h2>
-
-        <table class="pricing-table">
-          <tr>
-            <th>Duration</th>
-            <th>Price (₹)</th>
-          </tr>
-
-          <tr>
-            <td>15 Days</td>
-            <td>₹ 1500</td>
-          </tr>
-          <tr>
-            <td>30 Days</td>
-            <td>₹ 3500</td>
-          </tr>
-
-          <tr>
-            <td>90 Days</td>
-            <td>₹ 9500</td>
-          </tr>
-        </table>
       </section>
 
       <!-- pages -->
@@ -382,7 +329,7 @@
                 <input
                   class="text-field w-input"
                   maxlength="256"
-                  name="Email"
+                  name="email"
                   data-name="Email"
                   placeholder="Your Email"
                   type="email"
@@ -398,151 +345,72 @@
                 <input
                   class="text-field w-input"
                   maxlength="20"
-                  name="Phone"
+                  name="phone"
                   data-name="Phone"
                   placeholder="Phone Number"
                   type="tel"
                   id="Phone"
-                  required=""
+                  required
                 />
               </div>
               <div class="text-field-item">
                 <input
                   class="text-field w-input"
                   maxlength="256"
-                  name="College"
+                  name="college"
                   data-name="College"
                   placeholder="College Name"
                   type="text"
                   id="College"
-                  required=""
+                  required
                 />
               </div>
             </div>
 
-            <!-- Row 3: Degree + Year -->
+            <!-- Row 3: Degree + Location -->
             <div class="text-field-item-block">
               <div class="text-field-item">
                 <input
                   class="text-field w-input"
                   maxlength="100"
-                  name="Degree"
+                  name="degree"
                   data-name="Degree"
                   placeholder="Degree (e.g., B.Tech, BCA)"
                   type="text"
                   id="Degree"
-                  required=""
+                  required
                 />
               </div>
-              <div class="text-field-item">
-                <div class="select-text-field-block">
-                  <select
-                    id="Year"
-                    name="Year"
-                    data-name="Year"
-                    required=""
-                    class="select-field w-select"
-                  >
-                    <option value="">Select Year of Study</option>
-                    <option value="1st">1st Year</option>
-                    <option value="2nd">2nd Year</option>
-                    <option value="3rd">3rd Year</option>
-                    <option value="Final">Final Year</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Row 4: City/State + Domain -->
-            <div class="text-field-item-block">
               <div class="text-field-item">
                 <input
                   class="text-field w-input"
                   maxlength="100"
-                  name="Location"
+                  name="location"
                   data-name="Location"
                   placeholder="City, State"
                   type="text"
                   id="Location"
-                  required=""
+                  required
                 />
               </div>
-              <div class="text-field-item">
-                <div class="select-text-field-block">
-                  <select
-                    id="Field"
-                    name="Field"
-                    data-name="Field"
-                    required=""
-                    class="select-field w-select"
-                  >
-                    <option value="">Select Internship Domain</option>
-                    <option value="Full Stack Development">
-                      Full Stack Development
-                    </option>
-                    <option value="Frontend Development">
-                      Frontend Development
-                    </option>
-                    <option value="Backend Development">
-                      Backend Development
-                    </option>
-                    <option value="Embedded Systems & IoT">
-                      Embedded Systems & IoT
-                    </option>
-                    <option value="AR/VR Development">AR/VR Development</option>
-                    <option value="3D Modelling / Designing">
-                      3D Modelling / Designing
-                    </option>
-                    <option value="Machine Learning">Machine Learning</option>
-                    <option value="Deep Learning">Deep Learning</option>
-                    <option value="iOS Developer">iOS Developer</option>
-                    <option value="Market Analyst">Market Analyst</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Editing">Editing</option>
-                    <option value="Content Writer">Content Writer</option>
-                  </select>
-                </div>
-              </div>
             </div>
 
-            <!-- Row 5: Duration + Mode -->
+            <!-- Row 4: Description (Text Area) -->
             <div class="text-field-item-block">
-              <div class="text-field-item">
-                <div class="select-text-field-block">
-                  <select
-                    id="Duration"
-                    name="Duration"
-                    data-name="Duration"
-                    required=""
-                    class="select-field w-select"
-                  >
-                    <option value="">Select Program Duration</option>
-
-                    <option value="15 Days">15 Days</option>
-                    <option value="1 Month">1 Month</option>
-                    <option value="2 Months">2 Month</option>
-                    <option value="3 Months">3 Months</option>
-                  </select>
-                </div>
-              </div>
-              <div class="text-field-item">
-                <div class="select-text-field-block">
-                  <select
-                    id="Mode"
-                    name="Mode"
-                    data-name="Mode"
-                    required=""
-                    class="select-field w-select"
-                  >
-                    <option value="">Select Preferred Mode</option>
-                    <option value="Online">Online</option>
-                    <option value="Offline">Offline</option>
-                    <option value="Hybrid">Hybrid</option>
-                  </select>
-                </div>
+              <div class="text-field-item" style="width: 100%">
+                <textarea
+                  class="text-field w-input"
+                  name="description"
+                  id="Description"
+                  rows="5"
+                  maxlength="1000"
+                  placeholder="Write your description here..."
+                  required
+                ></textarea>
               </div>
             </div>
 
+            <!-- Submit Button -->
             <div class="form-button-block">
               <div
                 data-w-id="fbab2baa-3a8f-4b14-b095-b9a4be041e3b"
@@ -554,11 +422,11 @@
                   </div>
                   <div class="primary-button-text-2 outline-5">
                     <button
-                      type="button"
+                      type="submit"
                       id="nextBtn"
                       class="submit-button w-button"
                     >
-                      Next
+                      Submit
                     </button>
                   </div>
                   <div
@@ -577,182 +445,6 @@
           </form>
         </div>
 
-        <!-- Page 2 -->
-        <div
-          class="contact-wrapper"
-          id="page-2"
-          style="display: none; justify-content: center"
-        >
-          <div class="container" style="width: 80%; max-width: 1000px">
-            <div class="contact-heading-title-block">
-              <h3 class="contact-heading-title">Experience & Payment</h3>
-            </div>
-            <div class="contact-form-block w-form">
-              <form
-                id="experience-form"
-                name="experience-form"
-                method="post"
-                class="contact-form"
-              >
-                <!-- Experience Info -->
-                <div class="text-field-item-block">
-                  <div class="text-field-item">
-                    <div class="select-text-field-block">
-                      <select
-                        id="Experience"
-                        name="Experience"
-                        data-name="Experience"
-                        class="select-field w-select"
-                        required
-                      >
-                        <option value="">Do you have experience?</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="text-field-item">
-                    <input
-                      class="text-field w-input"
-                      maxlength="256"
-                      name="Experience-Desc"
-                      data-name="Experience Desc"
-                      placeholder="If yes, briefly describe"
-                      type="text"
-                      id="Experience-Desc"
-                    />
-                  </div>
-                </div>
-
-                <!-- Motivation -->
-                <div class="text-field-item-block">
-                  <div class="text-field-item">
-                    <textarea
-                      required
-                      placeholder="Why are you applying for this internship?"
-                      maxlength="5000"
-                      id="Motivation"
-                      name="Motivation"
-                      data-name="Motivation"
-                      class="text-area w-input"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Payment Details -->
-                <h4>Payment Information</h4>
-                <div class="text-field-item-block">
-                  <div class="text-field-item">
-                    <p><strong>Scan to Pay</strong></p>
-                    <img
-                      src="../assets/images/qr.png"
-                      style="max-width: 200px"
-                    />
-                    <p style="font-size: 14px">
-                      UPI ID: <strong>e.monish1820030-4@okhdfcbank</strong
-                      ><br />
-                      Account Name : <strong> Nexgen Nextopia </strong> <br />
-                      Account Number :<strong> 363531826182618 </strong> <br />
-                      IFSC Code : <strong> TMBL0000363 </strong>
-                    </p>
-                  </div>
-                  <div class="text-field-item">
-                    <input
-                      class="text-field w-input"
-                      maxlength="256"
-                      name="Payment-Ref"
-                      data-name="Payment Ref"
-                      placeholder="Payment Reference ID"
-                      type="text"
-                      id="Payment-Ref"
-                      required
-                    />
-                    <br />
-                    <label
-                      for="Payment-Screenshot"
-                      style="
-                        display: block;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                      "
-                    >
-                      Payment Screenshot (if applicable)
-                    </label>
-                    <input
-                      type="file"
-                      accept=".jpg,.jpeg,.png"
-                      class="text-field w-input"
-                      name="Payment-Screenshot"
-                      data-name="Payment Screenshot"
-                      id="Payment-Screenshot"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <!-- Buttons -->
-                <div style="display: flex; gap: 12px">
-                  <div class="form-button-block">
-                    <div class="primary-button-2 outline">
-                      <div class="primary-all-content outline-2">
-                        <div class="primary-button-arrow-block-2 outline-3">
-                          <div class="primary-button-arrow-2 two"></div>
-                        </div>
-                        <div class="primary-button-text-2 outline-5">
-                          <button
-                            type="button"
-                            id="prevBtn"
-                            class="submit-button w-button"
-                          >
-                            Previous
-                          </button>
-                        </div>
-                        <div
-                          class="primary-button-arrow-block-right-2"
-                          style="opacity: 0; width: 0px; height: 0px"
-                        >
-                          <div class="primary-button-arrow-2"></div>
-                        </div>
-                      </div>
-                      <div
-                        class="button-hover-bg-outline"
-                        style="width: 0%; height: 100%"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="form-button-block">
-                    <div class="primary-button-2 outline">
-                      <div class="primary-all-content outline-2">
-                        <div class="primary-button-arrow-block-2 outline-3">
-                          <div class="primary-button-arrow-2 two"></div>
-                        </div>
-                        <div class="primary-button-text-2 outline-5">
-                          <input
-                            type="submit"
-                            data-wait="Please wait..."
-                            class="submit-button w-button"
-                            value="Submit Application"
-                          />
-                        </div>
-                        <div
-                          class="primary-button-arrow-block-right-2"
-                          style="opacity: 0; width: 0px; height: 0px"
-                        >
-                          <div class="primary-button-arrow-2"></div>
-                        </div>
-                      </div>
-                      <div
-                        class="button-hover-bg-outline"
-                        style="width: 0%; height: 100%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
         <!-- Thank You -->
         <div
           class="contact-wrapper"
@@ -767,68 +459,32 @@
           </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const form1 = document.getElementById("email-form");
-            const form2 = document.getElementById("experience-form");
-            const nextBtn = document.getElementById("nextBtn");
-            const prevBtn = document.getElementById("prevBtn");
-            const submitBtn = document.getElementById("submit-btn");
-            const page1 = document.getElementById("page-1");
-            const page2 = document.getElementById("page-2");
-            const thankYou = document.getElementById("thank-you");
+          (function () {
+            emailjs.init("f23phSOxXB_XawDZe"); // Public key
+          })();
 
-            // Disable Page 2 fields initially
-            toggleRequired(form2, false);
+          document
+            .getElementById("email-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
 
-            function toggleRequired(form, enable) {
-              [...form.querySelectorAll("[required]")].forEach((el) => {
-                if (enable) {
-                  el.setAttribute("required", "");
-                } else {
-                  el.removeAttribute("required");
-                }
-              });
-            }
+              const form = this;
+              const thankYou = document.getElementById("thank-you");
 
-            // Next button → validate page1 then show page2
-            nextBtn.addEventListener("click", () => {
-              if (form1.checkValidity()) {
-                page1.style.display = "none";
-                page2.style.display = "block";
-                toggleRequired(form1, false);
-                toggleRequired(form2, true);
-              } else {
-                form1.reportValidity();
-              }
+              emailjs
+                .sendForm("service_7yt01yw", "template_cjd7ofb", form)
+                .then(
+                  function () {
+                    form.style.display = "none"; // Hide form
+                    thankYou.style.display = "flex"; // Show thank-you message
+                  },
+                  function (error) {
+                    alert("❌ Failed to send: " + JSON.stringify(error));
+                  }
+                );
             });
-
-            // Previous button → back to page1
-            prevBtn.addEventListener("click", () => {
-              page2.style.display = "none";
-              page1.style.display = "block";
-              toggleRequired(form2, false);
-              toggleRequired(form1, true);
-            });
-
-            // Submit → validate page2, call sendMail if available, then show thank-you
-            form2.addEventListener("submit", (e) => {
-              e.preventDefault();
-              if (form2.checkValidity()) {
-                if (typeof sendMail === "function") {
-                  sendMail();
-                }
-                page2.style.display = "none";
-                thankYou.style.display = "flex";
-                form1.reset();
-                form2.reset();
-                toggleRequired(form2, false);
-                toggleRequired(form1, true);
-              } else {
-                form2.reportValidity();
-              }
-            });
-          });
         </script>
       </section>
 
@@ -919,14 +575,14 @@
                       </li>
                       <li class="footer-link-item">
                         <a
-                          href="../project.html"
+                          href="./project.html"
                           aria-current="page"
                           class="footer-link"
                           >Projects</a
                         >
                       </li>
                       <li class="footer-link-item">
-                        <a href="../ventures.html" class="footer-link"
+                        <a href="./ventures.html" class="footer-link"
                           >Ventures</a
                         >
                       </li>
@@ -943,17 +599,17 @@
                       class="footer-link-categories-item w-list-unstyled"
                     >
                       <li class="footer-link-item">
-                        <a href="../community.html" class="footer-link"
+                        <a href="./community.html" class="footer-link"
                           >Our Community</a
                         >
                       </li>
                       <li class="footer-link-item">
-                        <a href="../community.html#mentors" class="footer-link"
+                        <a href="./community.html#mentors" class="footer-link"
                           >Our Mentors</a
                         >
                       </li>
                       <li class="footer-link-item">
-                        <a href="../contact.html" class="footer-link"
+                        <a href="./contact.html" class="footer-link"
                           >Contact Us</a
                         >
                       </li>
@@ -965,13 +621,13 @@
                       class="footer-link-categories-item w-list-unstyled"
                     >
                       <li class="footer-link-item">
-                        <a href="../internship.html" class="footer-link"
+                        <a href="./internship.html" class="footer-link"
                           >Internships</a
                         >
                       </li>
 
                       <li class="footer-link-item">
-                        <a href="./join-program.html" class="footer-link"
+                        <a href="./pages/join-program.html" class="footer-link"
                           >Join Intern</a
                         >
                       </li>
