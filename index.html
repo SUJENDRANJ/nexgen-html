@@ -137,7 +137,7 @@
                 href="/"
                 aria-current="page"
                 class="brand w-nav-brand w--current"
-                style="width: 3rem"
+                style="width: 3rem; z-index: 99999"
                 ><img
                   data-w-id="3b97446a-c812-567a-d83c-262c45205db0"
                   loading="lazy"
@@ -263,10 +263,11 @@
       >
         <video
           class="vid"
-          src="https://cdn.pixabay.com/video/2023/07/24/173102-848555581_large.mp4"
+          src="https://cdn.pixabay.com/video/2023/04/12/158549-816999843_large.mp4"
           autoplay
           muted
           loop
+          preload="auto"
           playsinline
           style="
             position: absolute;
@@ -279,7 +280,7 @@
         ></video>
 
         <!-- Black Overlay -->
-        <div
+        <!-- <div
           style="
             position: absolute;
             top: 0;
@@ -289,7 +290,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             pointer-events: none;
           "
-        ></div>
+        ></div> -->
 
         <script>
           document.addEventListener("click", () => {
@@ -1443,6 +1444,7 @@
             object-fit: cover;
             z-index: -1;
           "
+          preload="auto"
         >
           <source
             src="https://cdn.pixabay.com/video/2018/12/17/20072-307163785_large.mp4"
@@ -3486,122 +3488,284 @@
                 <div role="list">
                   <div class="carousel-container">
                     <div class="carousel">
-                      <div class="carousel-item">
-                        <img
-                          src="./assets/images/community/monish.jpg"
-                          alt="Image 1"
-                        />
+                      <div
+                        class="carousel-item"
+                        style="transform: rotateZ(-2deg)"
+                      >
+                        <div class="media" href="./community.html">
+                          <img
+                            src="./assets/images/community/monish.jpg"
+                            alt="Image 1"
+                          />
+                          <video
+                            src="./assets/community/videos/(1).mp4"
+                            class="vid"
+                            muted
+                            loop
+                          ></video>
+                        </div>
                         <h6>Monish C</h6>
                         <p>CEO</p>
                       </div>
-                      <div class="carousel-item">
-                        <img
-                          src="./assets/images/community/gopi.jpg"
-                          alt="Image 2"
-                        />
+
+                      <div
+                        class="carousel-item"
+                        style="transform: rotateZ(0deg)"
+                        href="./community.html"
+                      >
+                        <div class="media">
+                          <img
+                            src="./assets/images/community/gopi.jpg"
+                            alt="Image 2"
+                          />
+                          <video
+                            src="./assets/community/videos/(2).mp4"
+                            class="vid"
+                            muted
+                            loop
+                          ></video>
+                        </div>
                         <h6>Gopinath</h6>
                         <p>Associate Chief</p>
                       </div>
-                      <div class="carousel-item">
-                        <img
-                          src="./assets/images/community/ruba.jpg"
-                          alt="Image 3"
-                        />
+
+                      <div
+                        class="carousel-item"
+                        style="transform: rotateZ(-2deg)"
+                      >
+                        <div class="media">
+                          <img
+                            src="./assets/images/community/ruba.jpg"
+                            alt="Image 3"
+                          />
+                          <video
+                            src="./assets/community/videos/(7).mp4"
+                            class="vid"
+                            muted
+                            loop
+                          ></video>
+                        </div>
                         <h6>Ruba Sree</h6>
                         <p>Associate Chief</p>
                       </div>
-                      <div class="carousel-item">
-                        <img
-                          src="./assets/images/community/Soumya.jpg"
-                          alt="Image 3"
-                        />
+
+                      <div
+                        class="carousel-item"
+                        style="transform: rotateZ(4deg)"
+                      >
+                        <div class="media">
+                          <img
+                            src="./assets/images/community/Soumya.jpg"
+                            alt="Image 4"
+                          />
+                          <video
+                            src="./assets/community/videos/(8).mp4"
+                            class="vid"
+                            muted
+                            loop
+                          ></video>
+                        </div>
                         <h6>Soumya S</h6>
                         <p>Associate Chief</p>
                       </div>
                     </div>
                   </div>
 
-                  <style>
-                    .carousel-container {
-                      width: 100%;
-                      overflow: hidden;
-                      position: relative;
-                    }
-
-                    .carousel {
-                      display: flex;
-                      transition: transform 0.5s ease;
-                      gap: 1rem;
-                      /* flex-wrap: wrap;
-          gap: 2rem;
-          justify-content: center; */
-                    }
-
-                    .carousel-item {
-                      min-width: 100%;
-                      text-align: center;
-                      margin-top: 3rem;
-                    }
-
-                    /* Fixed Image Size */
-                    .carousel-item img {
-                      width: 100%;
-                      max-width: 500px;
-                      height: 300px;
-                      object-fit: cover;
-                    }
-
-                    /* Fixed Text Size */
-                    .carousel-item h6 {
-                      margin-top: 20px;
-                      color: #333;
-                    }
-                    .carousel-item p {
-                      text-transform: uppercase;
-                      margin-top: 10px;
-                    }
-
-                    /* Larger devices - show items side by side */
-                    @media (min-width: 768px) {
-                      .carousel {
-                        transform: none !important;
-                      }
-                      .carousel-item {
-                        min-width: auto;
-                        width: 33.33%;
-                      }
-                    }
-                  </style>
-
                   <script>
-                    let currentIndex = 0;
+                    // Handle video play/pause on hover
+                    document.querySelectorAll(".media").forEach((media) => {
+                      const video = media.querySelector("video");
 
-                    function startCarousel() {
-                      const carousel = document.querySelector(".carousel");
-                      const items = document.querySelectorAll(".carousel-item");
-                      const totalItems = items.length;
+                      media.addEventListener("mouseenter", () => {
+                        video.currentTime = 0; // restart from beginning
+                        video.play();
+                      });
 
-                      setInterval(() => {
-                        currentIndex = (currentIndex + 1) % totalItems;
-                        carousel.style.transform = `translateX(-${
-                          currentIndex * 100
-                        }%)`;
-                      }, 3000);
-                    }
-
-                    // Start carousel only for smaller devices
-                    if (window.innerWidth < 768) {
-                      startCarousel();
-                    }
+                      media.addEventListener("mouseleave", () => {
+                        video.pause();
+                      });
+                    });
                   </script>
                 </div>
               </div>
             </div>
           </div>
 
+          <style>
+            /* video */
+
+            /* Carousel container */
+            .carousel-container {
+              width: 100%;
+              /* overflow: hidden; */
+              position: relative;
+              margin-top: 2rem;
+            }
+
+            /* Carousel */
+            .carousel {
+              display: flex;
+              transition: transform 0.6s ease-in-out;
+            }
+
+            /* Carousel items */
+            .carousel-item {
+              min-width: 100%;
+              text-align: center;
+              margin: 0 -3.5rem;
+              margin-top: 2rem;
+
+              padding: 1rem;
+              /* border-radius: 1rem;
+                      background: #f9fafc; */
+              /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+              /* transition: transform 0.3s ease, box-shadow 0.3s ease;
+                      overflow:hidden */
+            }
+
+            /* .carousel-item:hover {
+                      transform: translateY(-6px);
+                      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                    } */
+
+            /* Image */
+            .carousel-item img {
+              width: 80%;
+              max-width: 360px;
+              height: 280px;
+              border-radius: 0.75rem;
+              object-fit: cover;
+              /* border-radius: 100%; */
+            }
+
+            /* Text */
+            .carousel-item h6 {
+              margin-top: 15px;
+              font-size: 1.25rem;
+              font-weight: 600;
+              color: #111827;
+            }
+
+            .carousel-item p {
+              margin-top: 6px;
+              font-size: 0.9rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              color: #6b7280;
+            }
+
+            .carousel {
+              transform: none !important;
+              justify-content: center;
+              /* flex-wrap: wrap; */
+            }
+
+            .carousel-item {
+              min-width: auto;
+              width: 28%;
+            }
+
+            /* Responsive - show side by side on larger screens */
+            @media (max-width: 1000px) {
+              .carousel-item {
+                /* min-width: auto; */
+                width: 70%;
+                max-height: 80%;
+              }
+            }
+
+            @media (max-width: 700px) {
+              .carousel {
+                /* display: flex; */
+                flex-wrap: wrap;
+              }
+
+              .carousel-item {
+                margin: 0 -2.5rem;
+              }
+
+              .media:hover {
+                transform: none;
+
+                z-index: 999;
+              }
+            }
+          </style>
+
+          <style>
+            /* Media wrapper */
+            .media {
+              position: relative;
+              width: 80%;
+              max-width: 360px;
+              height: 280px;
+              margin: 0 auto;
+              border-radius: 0.75rem;
+              overflow: hidden;
+            }
+
+            .media img,
+            .media video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 0.75rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+              transition: opacity 0.4s ease;
+            }
+
+            /* By default show image */
+            .media video {
+              opacity: 0;
+              pointer-events: none;
+            }
+
+            /* On hover → fade video in, hide image */
+            .media:hover img {
+              opacity: 0;
+            }
+            .media:hover video {
+              opacity: 1;
+            }
+
+            .media:hover {
+              transform: scale(1.1) rotate(3deg);
+              transition: all 0.3s ease-in;
+
+              z-index: 999;
+            }
+          </style>
+
+          <script>
+            let currentIndex = 0;
+            let autoSlide;
+
+            function startCarousel() {
+              const carousel = document.querySelector(".carousel");
+              const items = document.querySelectorAll(".carousel-item");
+              const totalItems = items.length;
+
+              autoSlide = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalItems;
+
+                // ✅ Calculate actual item width including gap
+                const itemWidth = items[0].getBoundingClientRect().width;
+                carousel.style.transform = `translateX(-${
+                  currentIndex * itemWidth
+                }px)`;
+              }, 3000);
+            }
+
+            if (window.innerWidth < 768) {
+              startCarousel();
+            }
+          </script>
+
           <div
             data-w-id="e34d803f-0b79-1bb2-60f6-2fa6d0da3f92"
-            style="opacity: 0; margin-top: 6rem"
+            style="opacity: 0"
             class="blog-all-button"
           >
             <a
@@ -3825,7 +3989,7 @@
                         ><div class="large-button-all-content">
                           <div class="large-button-text">
                             <div class="button-text large medium-button">
-                              Book Discovery Call
+                              Contact Us
                             </div>
                           </div>
                           <div class="large-button-hover-bg">
@@ -3888,7 +4052,7 @@
                     class="copyright-text"
                   >
                     <div class="body-text-small text-medium">
-                      © All rights reserved by
+                      © All copyrights reserved by
                       <a href="/" aria-current="page" class="poomo w--current"
                         >Nexgen Nextopia</a
                       >
